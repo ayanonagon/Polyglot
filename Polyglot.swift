@@ -1,4 +1,4 @@
-// Vertaler.swift
+// Polyglot.swift
 //
 // Copyright (c) 2014 Ayaka Nonaka
 //
@@ -22,7 +22,7 @@
 
 import Foundation
 
-class Vertaler {
+class Polyglot {
 
     let session: Session
 
