@@ -1,7 +1,7 @@
 Vertaler
 ========
 
-Swift wrapper around Microsoft Translate API. It currently translates only Dutch to English.
+Swift wrapper around Microsoft Translate API. By default, it translates to English from whatever language is detected.
 
 ## Setting up an account for Microsoft Translate
 
@@ -15,6 +15,12 @@ Create a new ```Vertaler``` ("translator") instance.
 let translator = Vertaler(clientId: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
 ```
 
+You can optionally specify to & from language codes.
+```swift
+translator.fromLanguage = "nl" // It will automatically detect the language if you don't set this.
+translator.toLanguage = "en" // English. This is the default.
+```
+
 Start translating.
 ```swift
 let dutch = "Ik weet het niet."
@@ -22,3 +28,7 @@ translator.translate(dutch) { translation in
    println(String(format: "\"%@\" means \"%@\"", dutch, translation))
 }
 ```
+
+## Dependencies
+
+Because Microsoft's Translate API returns XML, Vertaler depends on [Ono](https://github.com/mattt/Ono). You should add it to your project however you like ([CocoaPods](http://cocoapods.org/) is recommended), and add it to your target's [bridging header](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html). When CocoaPods fully supports Swift, this process will become a lot simpler. :octocat:
