@@ -15,6 +15,12 @@ Create a new ```Vertaler``` ("translator") instance.
 let translator = Vertaler(clientId: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
 ```
 
+You can optionally specify to & from language codes.
+```swift
+translator.fromLanguage = "nl" // It will automatically detect the language if you don't set this.
+translator.toLanguage = "en" // English. This is the default.
+```
+
 Start translating.
 ```swift
 let dutch = "Ik weet het niet."
