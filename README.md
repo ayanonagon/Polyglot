@@ -1,7 +1,7 @@
 Vertaler
 ========
 
-Swift wrapper around Microsoft Translate API. It currently translates only Dutch to English.
+Swift wrapper around Microsoft Translate API. By default, it translates to English from whatever language is detected.
 
 ## Setting up an account for Microsoft Translate
 
