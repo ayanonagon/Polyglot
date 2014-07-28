@@ -1,4 +1,4 @@
-Vertaler
+Polyglot
 ========
 
 Swift wrapper around Microsoft Translate API. By default, it translates to English from whatever language is detected.
@@ -6,13 +6,13 @@ Swift wrapper around Microsoft Translate API. By default, it translates to Engli
 ## Setting up an account for Microsoft Translate
 
 1. Subscribe to the Microsoft Translate service [here](https://datamarket.azure.com/dataset/bing/microsofttranslator). You'll probably need to set up a new account first. Good luck. :trollface:
-2. Create a new application [here](https://datamarket.azure.com/developer/applications). This is where you will be given a client ID and client secret (which you will need for using Vertaler).
+2. Create a new application [here](https://datamarket.azure.com/developer/applications). This is where you will be given a client ID and client secret (which you will need for using Polyglot).
 
 ## Basic Usage
 
-Create a new ```Vertaler``` ("translator") instance.
+Create a new ```Polyglot``` instance.
 ```swift
-let translator = Vertaler(clientId: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
+let translator = Polyglot(clientId: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
 ```
 
 You can optionally specify to & from language codes.
@@ -31,4 +31,4 @@ translator.translate(dutch) { translation in
 
 ## Dependencies
 
-Because Microsoft's Translate API returns XML, Vertaler depends on [Ono](https://github.com/mattt/Ono). You should add it to your project however you like ([CocoaPods](http://cocoapods.org/) is recommended), and add it to your target's [bridging header](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html). When CocoaPods fully supports Swift, this process will become a lot simpler. :octocat:
+Because Microsoft's Translate API returns XML, Polyglot depends on [Ono](https://github.com/mattt/Ono). You should add it to your project however you like ([CocoaPods](http://cocoapods.org/) is recommended), and add it to your target's [bridging header](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html). When CocoaPods fully supports Swift, this process will become a lot simpler. :octocat:
