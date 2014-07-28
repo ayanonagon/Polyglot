@@ -30,13 +30,14 @@ class Session {
     var accessToken: String?
     var expirationTime: NSDate?
 
-    init(clientId: String, clientSecret: String) {
+    init(clientId: String, clientSecret: String)
+    {
         self.clientId = clientId
         self.clientSecret = clientSecret
     }
 
-    func getAccessToken(callback: ((token: String) -> (Void))) {
-
+    func getAccessToken(callback: ((token: String) -> (Void)))
+    {
         if (!self.accessToken || self.isExpired) {
             let url = NSURL(string: "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13")
 
@@ -64,7 +65,8 @@ class Session {
         }
     }
 
-    private var isExpired: Bool {
+    private var isExpired: Bool
+    {
         return self.expirationTime?.earlierDate(NSDate()) == self.expirationTime
     }
 }

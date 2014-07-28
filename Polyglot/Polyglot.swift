@@ -29,12 +29,14 @@ class Polyglot {
     var fromLanguage: String?
     var toLanguage: String
 
-    init(clientId: String, clientSecret: String) {
+    init(clientId: String, clientSecret: String)
+    {
         self.session = Session(clientId: clientId, clientSecret: clientSecret)
         self.toLanguage = "en"
     }
 
-    func translate(text: String, callback: ((translation: String) -> (Void))) {
+    func translate(text: String, callback: ((translation: String) -> (Void)))
+    {
         self.session.getAccessToken { token in
             let toLanguageComponent = "&to=" + self.toLanguage.urlEncoded
             let fromLanguageComponent = self.fromLanguage ? "&from=" + self.fromLanguage!.urlEncoded : ""
