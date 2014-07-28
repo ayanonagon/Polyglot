@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B60F875D1985F1C200ABB94A /* PolyglotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F875C1985F1C200ABB94A /* PolyglotTests.swift */; };
+		B67FC7891985F20B0030ABF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7831985F20B0030ABF8 /* AppDelegate.swift */; };
+		B67FC78A1985F20B0030ABF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7841985F20B0030ABF8 /* Main.storyboard */; };
+		B67FC78B1985F20B0030ABF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7861985F20B0030ABF8 /* Images.xcassets */; };
+		B67FC78C1985F20B0030ABF8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7871985F20B0030ABF8 /* Info.plist */; };
+		B67FC78D1985F20B0030ABF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7881985F20B0030ABF8 /* ViewController.swift */; };
+		B67FC7921985F2600030ABF8 /* Polyglot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC78F1985F2600030ABF8 /* Polyglot.swift */; };
+		B67FC7931985F2600030ABF8 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7901985F2600030ABF8 /* Session.swift */; };
+		B67FC7941985F2600030ABF8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7911985F2600030ABF8 /* StringExtension.swift */; };
+		C4E87E7A7737461FA04DAB32 /* libPods-Polyglot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2A1C66E5BE4AF5992C1C5A /* libPods-Polyglot.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B60F87571985F1C200ABB94A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B60F873C1985F1C200ABB94A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B60F87431985F1C200ABB94A;
+			remoteInfo = Polyglot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4917C48171EF41229D64EBB0 /* Pods-Polyglot.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polyglot.xcconfig"; path = "Pods/Pods-Polyglot.xcconfig"; sourceTree = "<group>"; };
+		9D2A1C66E5BE4AF5992C1C5A /* libPods-Polyglot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Polyglot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60F87441985F1C200ABB94A /* Polyglot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polyglot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60F87561985F1C200ABB94A /* PolyglotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyglotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60F875B1985F1C200ABB94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60F875C1985F1C200ABB94A /* PolyglotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyglotTests.swift; sourceTree = "<group>"; };
+		B67FC7831985F20B0030ABF8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B67FC7851985F20B0030ABF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B67FC7861985F20B0030ABF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B67FC7871985F20B0030ABF8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67FC7881985F20B0030ABF8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B67FC78F1985F2600030ABF8 /* Polyglot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polyglot.swift; sourceTree = "<group>"; };
+		B67FC7901985F2600030ABF8 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B67FC7911985F2600030ABF8 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B67FC7951985F2F20030ABF8 /* Polyglot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Polyglot-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B60F87411985F1C200ABB94A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4E87E7A7737461FA04DAB32 /* libPods-Polyglot.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60F87531985F1C200ABB94A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD05005C88874F61B93358E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D2A1C66E5BE4AF5992C1C5A /* libPods-Polyglot.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B60F873B1985F1C200ABB94A = {
+			isa = PBXGroup;
+			children = (
+				B67FC78E1985F2600030ABF8 /* Polyglot */,
+				B67FC7821985F20B0030ABF8 /* PolyglotSample */,
+				B60F87591985F1C200ABB94A /* PolyglotTests */,
+				B60F87451985F1C200ABB94A /* Products */,
+				4917C48171EF41229D64EBB0 /* Pods-Polyglot.xcconfig */,
+				AD05005C88874F61B93358E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B60F87451985F1C200ABB94A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B60F87441985F1C200ABB94A /* Polyglot.app */,
+				B60F87561985F1C200ABB94A /* PolyglotTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B60F87591985F1C200ABB94A /* PolyglotTests */ = {
+			isa = PBXGroup;
+			children = (
+				B60F875C1985F1C200ABB94A /* PolyglotTests.swift */,
+				B60F875A1985F1C200ABB94A /* Supporting Files */,
+			);
+			path = PolyglotTests;
+			sourceTree = "<group>";
+		};
+		B60F875A1985F1C200ABB94A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B60F875B1985F1C200ABB94A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B67FC7821985F20B0030ABF8 /* PolyglotSample */ = {
+			isa = PBXGroup;
+			children = (
+				B67FC7951985F2F20030ABF8 /* Polyglot-Bridging-Header.h */,
+				B67FC7831985F20B0030ABF8 /* AppDelegate.swift */,
+				B67FC7881985F20B0030ABF8 /* ViewController.swift */,
+				B67FC7841985F20B0030ABF8 /* Main.storyboard */,
+				B67FC7861985F20B0030ABF8 /* Images.xcassets */,
+				B67FC7871985F20B0030ABF8 /* Info.plist */,
+			);
+			path = PolyglotSample;
+			sourceTree = "<group>";
+		};
+		B67FC78E1985F2600030ABF8 /* Polyglot */ = {
+			isa = PBXGroup;
+			children = (
+				B67FC78F1985F2600030ABF8 /* Polyglot.swift */,
+				B67FC7901985F2600030ABF8 /* Session.swift */,
+				B67FC7911985F2600030ABF8 /* StringExtension.swift */,
+			);
+			path = Polyglot;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B60F87431985F1C200ABB94A /* Polyglot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B60F87601985F1C200ABB94A /* Build configuration list for PBXNativeTarget "Polyglot" */;
+			buildPhases = (
+				7570B0E02F3942C0A3FA3D83 /* Check Pods Manifest.lock */,
+				B60F87401985F1C200ABB94A /* Sources */,
+				B60F87411985F1C200ABB94A /* Frameworks */,
+				B60F87421985F1C200ABB94A /* Resources */,
+				14F464BCB76C48F5AE7E012F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Polyglot;
+			productName = Polyglot;
+			productReference = B60F87441985F1C200ABB94A /* Polyglot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B60F87551985F1C200ABB94A /* PolyglotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B60F87631985F1C200ABB94A /* Build configuration list for PBXNativeTarget "PolyglotTests" */;
+			buildPhases = (
+				B60F87521985F1C200ABB94A /* Sources */,
+				B60F87531985F1C200ABB94A /* Frameworks */,
+				B60F87541985F1C200ABB94A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B60F87581985F1C200ABB94A /* PBXTargetDependency */,
+			);
+			name = PolyglotTests;
+			productName = PolyglotTests;
+			productReference = B60F87561985F1C200ABB94A /* PolyglotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B60F873C1985F1C200ABB94A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Ayaka Nonaka";
+				TargetAttributes = {
+					B60F87431985F1C200ABB94A = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					B60F87551985F1C200ABB94A = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = B60F87431985F1C200ABB94A;
+					};
+				};
+			};
+			buildConfigurationList = B60F873F1985F1C200ABB94A /* Build configuration list for PBXProject "Polyglot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B60F873B1985F1C200ABB94A;
+			productRefGroup = B60F87451985F1C200ABB94A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B60F87431985F1C200ABB94A /* Polyglot */,
+				B60F87551985F1C200ABB94A /* PolyglotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B60F87421985F1C200ABB94A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67FC78A1985F20B0030ABF8 /* Main.storyboard in Resources */,
+				B67FC78B1985F20B0030ABF8 /* Images.xcassets in Resources */,
+				B67FC78C1985F20B0030ABF8 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60F87541985F1C200ABB94A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14F464BCB76C48F5AE7E012F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Polyglot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7570B0E02F3942C0A3FA3D83 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B60F87401985F1C200ABB94A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B67FC7931985F2600030ABF8 /* Session.swift in Sources */,
+				B67FC7921985F2600030ABF8 /* Polyglot.swift in Sources */,
+				B67FC7941985F2600030ABF8 /* StringExtension.swift in Sources */,
+				B67FC7891985F20B0030ABF8 /* AppDelegate.swift in Sources */,
+				B67FC78D1985F20B0030ABF8 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60F87521985F1C200ABB94A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60F875D1985F1C200ABB94A /* PolyglotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B60F87581985F1C200ABB94A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B60F87431985F1C200ABB94A /* Polyglot */;
+			targetProxy = B60F87571985F1C200ABB94A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B67FC7841985F20B0030ABF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B67FC7851985F20B0030ABF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B60F875E1985F1C200ABB94A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B60F875F1985F1C200ABB94A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B60F87611985F1C200ABB94A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4917C48171EF41229D64EBB0 /* Pods-Polyglot.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PolyglotSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotSample/Polyglot-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B60F87621985F1C200ABB94A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4917C48171EF41229D64EBB0 /* Pods-Polyglot.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = PolyglotSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotSample/Polyglot-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		B60F87641985F1C200ABB94A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Polyglot.app/Polyglot";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PolyglotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		B60F87651985F1C200ABB94A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Polyglot.app/Polyglot";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PolyglotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B60F873F1985F1C200ABB94A /* Build configuration list for PBXProject "Polyglot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60F875E1985F1C200ABB94A /* Debug */,
+				B60F875F1985F1C200ABB94A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B60F87601985F1C200ABB94A /* Build configuration list for PBXNativeTarget "Polyglot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60F87611985F1C200ABB94A /* Debug */,
+				B60F87621985F1C200ABB94A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B60F87631985F1C200ABB94A /* Build configuration list for PBXNativeTarget "PolyglotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60F87641985F1C200ABB94A /* Debug */,
+				B60F87651985F1C200ABB94A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B60F873C1985F1C200ABB94A /* Project object */;
+}
