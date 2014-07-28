@@ -3,6 +3,11 @@ Vertaler
 
 Swift wrapper around Microsoft Translate API. It currently translates only Dutch to English.
 
+## Setting up an account for Microsoft Translate
+
+1. Subscribe to the Microsoft Translate service [here](https://datamarket.azure.com/dataset/bing/microsofttranslator). You'll probably need to set up a new account first. Good luck. :trollface:
+2. Create a new application [here](https://datamarket.azure.com/developer/applications). This is where you will be given a client ID and client secret (which you will need for using Vertaler).
+
 ## Basic Usage
 
 Create a new ```Vertaler``` ("translator") instance.
