@@ -29,6 +29,8 @@ translator.translate(dutch) { translation in
 }
 ```
 
+Check out the [sample project](https://github.com/ayanonagon/Polyglot/tree/master/PolyglotSample) for a quick demo.
+
 ## Dependencies
 
 Because Microsoft's Translate API returns XML, Polyglot depends on [Ono](https://github.com/mattt/Ono). You should add it to your project however you like ([CocoaPods](http://cocoapods.org/) is recommended), and add it to your target's [bridging header](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html). When CocoaPods fully supports Swift, this process will become a lot simpler. :octocat:
