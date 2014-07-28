@@ -3,11 +3,6 @@ Polyglot
 
 Swift wrapper around Microsoft Translate API. By default, it translates to English from whatever language is detected.
 
-## Setting up an account for Microsoft Translate
-
-1. Subscribe to the Microsoft Translate service [here](https://datamarket.azure.com/dataset/bing/microsofttranslator). You'll probably need to set up a new account first. Good luck. :trollface:
-2. Create a new application [here](https://datamarket.azure.com/developer/applications). This is where you will be given a client ID and client secret (which you will need for using Polyglot).
-
 ## Basic Usage
 
 Create a new ```Polyglot``` instance.
@@ -30,6 +25,11 @@ translator.translate(dutch) { translation in
 ```
 
 Check out the [sample project](https://github.com/ayanonagon/Polyglot/tree/master/PolyglotSample) for a quick demo.
+
+## Setting up an account for Microsoft Translate
+
+1. Subscribe to the Microsoft Translate service [here](https://datamarket.azure.com/dataset/bing/microsofttranslator). You'll probably need to set up a new account first. Good luck. :trollface:
+2. Create a new application [here](https://datamarket.azure.com/developer/applications). This is where you will be given a client ID and client secret (which you will need for using Polyglot).
 
 ## Dependencies
 
