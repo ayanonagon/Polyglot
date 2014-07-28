@@ -26,13 +26,19 @@ class Vertaler {
 
     let session: Session
 
+    var fromLanguage: String?
+    var toLanguage: String
+
     init(clientId: String, clientSecret: String) {
         self.session = Session(clientId: clientId, clientSecret: clientSecret)
+        self.toLanguage = "en"
     }
 
     func translate(text: String, callback: ((translation: String) -> (Void))) {
         self.session.getAccessToken { token in
-            let urlString = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + text.urlEncoded + "&from=nl&to=en"
+            let toLanguageComponent = "&to=" + self.toLanguage.urlEncoded
+            let fromLanguageComponent = self.fromLanguage ? "&from=" + self.fromLanguage!.urlEncoded : ""
+            let urlString = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + text.urlEncoded + toLanguageComponent + fromLanguageComponent
 
             let request = NSMutableURLRequest(URL: NSURL(string: urlString))
             request.HTTPMethod = "GET"
