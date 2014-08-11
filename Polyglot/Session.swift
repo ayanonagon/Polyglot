@@ -38,7 +38,7 @@ class Session {
 
     func getAccessToken(callback: ((token: String) -> (Void)))
     {
-        if (!self.accessToken || self.isExpired) {
+        if ((self.accessToken == nil) || self.isExpired) {
             let url = NSURL(string: "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13")
 
             let request = NSMutableURLRequest(URL: url)
