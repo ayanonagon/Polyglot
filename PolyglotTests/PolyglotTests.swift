@@ -12,6 +12,9 @@ import Polyglot
 
 class PolyglotTests: XCTestCase {
 
-    // Uhm. I'm pretty sure modules are broken in Xcode 6 Beta 4... Halp.
-
+    func testInit()
+    {
+        let polyglot: Polyglot = Polyglot(clientId: "myClientId", clientSecret: "myClientSecret")
+        XCTAssertEqual(polyglot.toLanguage, "en")
+    }
 }

@@ -5,3 +5,7 @@ target "Polyglot" do
   pod 'Ono', '~> 1.0'
 end
 
+target "PolyglotTests" do
+  pod 'Ono', '~> 1.0'
+end
+

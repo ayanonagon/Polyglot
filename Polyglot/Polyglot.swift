@@ -22,20 +22,20 @@
 
 import Foundation
 
-class Polyglot {
+public class Polyglot {
 
     let session: Session
 
-    var fromLanguage: String?
-    var toLanguage: String
+    public var fromLanguage: String?
+    public var toLanguage: String
 
-    init(clientId: String, clientSecret: String)
+    public init(clientId: String, clientSecret: String)
     {
         self.session = Session(clientId: clientId, clientSecret: clientSecret)
         self.toLanguage = "en"
     }
 
-    func translate(text: String, callback: ((translation: String) -> (Void)))
+    public func translate(text: String, callback: ((translation: String) -> (Void)))
     {
         self.session.getAccessToken { token in
             let toLanguageComponent = "&to=" + self.toLanguage.urlEncoded
