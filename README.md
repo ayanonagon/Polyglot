@@ -20,7 +20,7 @@ Start translating.
 ```swift
 let dutch = "Ik weet het niet."
 translator.translate(dutch) { translation in
-   println(String(format: "\"%@\" means \"%@\"", dutch, translation))
+    println("\"\(dutch)\" means \"\(translation)\"")
 }
 ```
 
