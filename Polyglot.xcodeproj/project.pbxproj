@@ -10,6 +10,7 @@
 		9D406EF852544675BEEF8107 /* libPods-PolyglotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB19CEF8EC0A40F58A59831D /* libPods-PolyglotTests.a */; };
 		B60F875D1985F1C200ABB94A /* PolyglotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F875C1985F1C200ABB94A /* PolyglotTests.swift */; };
 		B6156E3F1999D93B002CE52F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7841985F20B0030ABF8 /* Main.storyboard */; };
+		B6682231199C68AE00DFA909 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6682230199C68AE00DFA909 /* StringExtensionTests.swift */; };
 		B67FC7891985F20B0030ABF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7831985F20B0030ABF8 /* AppDelegate.swift */; };
 		B67FC78B1985F20B0030ABF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7861985F20B0030ABF8 /* Images.xcassets */; };
 		B67FC78D1985F20B0030ABF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7881985F20B0030ABF8 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 		B60F87561985F1C200ABB94A /* PolyglotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyglotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60F875B1985F1C200ABB94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B60F875C1985F1C200ABB94A /* PolyglotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyglotTests.swift; sourceTree = "<group>"; };
+		B6682230199C68AE00DFA909 /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		B66FEF8E19991A2500260677 /* PolyglotTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PolyglotTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		B67FC7831985F20B0030ABF8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67FC7851985F20B0030ABF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				B66FEF8E19991A2500260677 /* PolyglotTests-Bridging-Header.h */,
 				B60F875C1985F1C200ABB94A /* PolyglotTests.swift */,
+				B6682230199C68AE00DFA909 /* StringExtensionTests.swift */,
 				B60F875A1985F1C200ABB94A /* Supporting Files */,
 			);
 			path = PolyglotTests;
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6682231199C68AE00DFA909 /* StringExtensionTests.swift in Sources */,
 				B60F875D1985F1C200ABB94A /* PolyglotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

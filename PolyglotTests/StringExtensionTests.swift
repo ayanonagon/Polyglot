@@ -1,4 +1,4 @@
-// StringExtension.swift
+// StringExtensionTests.swift
 //
 // Copyright (c) 2014 Ayaka Nonaka
 //
@@ -20,12 +20,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import XCTest
+import Polyglot
 
-public extension String {
+class StringExtensionTests: XCTestCase {
 
-    public var urlEncoded: String
+    func testURLEncoded()
     {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
+        XCTAssertEqual(" ".urlEncoded, "%20")
     }
+
 }
