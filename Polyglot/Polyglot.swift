@@ -38,9 +38,9 @@ public class Polyglot {
     public func translate(text: String, callback: ((translation: String) -> (Void)))
     {
         self.session.getAccessToken { token in
-            let toLanguageComponent = "&to=" + self.toLanguage.urlEncoded
-            let fromLanguageComponent = (self.fromLanguage != nil) ? "&from=" + self.fromLanguage!.urlEncoded : ""
-            let urlString = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=" + text.urlEncoded + toLanguageComponent + fromLanguageComponent
+            let toLanguageComponent = "&to=\(self.toLanguage.urlEncoded!)"
+            let fromLanguageComponent = (self.fromLanguage != nil) ? "&from=\(self.fromLanguage!.urlEncoded!)" : ""
+            let urlString = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=\(text.urlEncoded!)\(toLanguageComponent)\(fromLanguageComponent)"
 
             let request = NSMutableURLRequest(URL: NSURL(string: urlString))
             request.HTTPMethod = "GET"

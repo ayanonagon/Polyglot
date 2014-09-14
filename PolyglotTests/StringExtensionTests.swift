@@ -27,9 +27,8 @@ class StringExtensionTests: XCTestCase {
 
     func testURLEncoded()
     {
-        XCTAssertEqual(" ".urlEncoded, "%20")
-        XCTAssertEqual("polyglot://".urlEncoded, "polyglot%3A%2F%2F")
-        XCTAssertEqual("Spreek je Nederlands?".urlEncoded, "Spreek%20je%20Nederlands%3F")
+        XCTAssertEqual(" ".urlEncoded!, "%20")
+        XCTAssertEqual("polyglot://".urlEncoded!, "polyglot%3A%2F%2F")
+        XCTAssertEqual("Spreek je Nederlands?".urlEncoded!, "Spreek%20je%20Nederlands%3F")
     }
-
 }

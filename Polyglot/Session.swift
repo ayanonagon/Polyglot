@@ -44,7 +44,7 @@ class Session {
             let request = NSMutableURLRequest(URL: url)
             request.HTTPMethod = "POST"
 
-            let bodyString = "client_id=" + clientId.urlEncoded + "&client_secret=" + clientSecret.urlEncoded + "&scope=http://api.microsofttranslator.com&grant_type=client_credentials"
+            let bodyString = "client_id=\(clientId.urlEncoded!)&client_secret=\(clientSecret.urlEncoded!)&scope=http://api.microsofttranslator.com&grant_type=client_credentials"
             request.HTTPBody = bodyString.dataUsingEncoding(NSUTF8StringEncoding)
 
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
