@@ -24,8 +24,7 @@ import Foundation
 
 public extension String {
 
-    public var urlEncoded: String?
-    {
+    public var urlEncoded: String? {
         return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
     }
 }
