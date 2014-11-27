@@ -28,7 +28,7 @@ class PolyglotTests: XCTestCase {
 
     func testInit() {
         let polyglot: Polyglot = Polyglot(clientId: "myClientId", clientSecret: "myClientSecret")
-        XCTAssertNil(polyglot.fromLanguage)
-        XCTAssertEqual(polyglot.toLanguage, "en")
+        XCTAssertNil(polyglot.fromLanguage?.rawValue)
+        XCTAssertEqual(polyglot.toLanguage, Language.English)
     }
 }
