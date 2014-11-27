@@ -14,8 +14,8 @@ let translator = Polyglot(clientId: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT
 
 You can optionally specify to & from language codes.
 ```swift
-translator.fromLanguage = "nl" // It will automatically detect the language if you don't set this.
-translator.toLanguage = "en" // English. This is the default.
+translator.fromLanguage = Language.Dutch // It will automatically detect the language if you don't set this.
+translator.toLanguage = Language.English // English. This is the default.
 ```
 
 Start translating.
