@@ -40,12 +40,12 @@ public class Polyglot {
             let fromLanguageComponent = (self.fromLanguage != nil) ? "&from=\(self.fromLanguage!.urlEncoded!)" : ""
             let urlString = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=\(text.urlEncoded!)\(toLanguageComponent)\(fromLanguageComponent)"
 
-            let request = NSMutableURLRequest(URL: NSURL(string: urlString))
+            let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
             request.HTTPMethod = "GET"
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
 
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
-                let document = ONOXMLDocument.XMLDocumentWithData(data, error: nil)
+                let document = ONOXMLDocument(data:data, error: nil)
                 let translation = document.rootElement.stringValue();
                 callback(translation: translation)
             }

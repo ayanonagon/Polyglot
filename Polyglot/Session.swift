@@ -39,7 +39,7 @@ class Session {
         if ((self.accessToken == nil) || self.isExpired) {
             let url = NSURL(string: "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13")
 
-            let request = NSMutableURLRequest(URL: url)
+            let request = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
 
             let bodyString = "client_id=\(clientId.urlEncoded!)&client_secret=\(clientSecret.urlEncoded!)&scope=http://api.microsofttranslator.com&grant_type=client_credentials"
