@@ -1,6 +1,8 @@
 Polyglot
 ========
 
+[![Build Status](https://travis-ci.org/ayanonagon/Polyglot.svg)](https://travis-ci.org/ayanonagon/Polyglot)
+
 Swift wrapper around Microsoft Translate API. By default, it translates to English from whatever language is detected.
 
 ## Basic Usage

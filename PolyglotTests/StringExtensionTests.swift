@@ -26,8 +26,20 @@ import Polyglot
 class StringExtensionTests: XCTestCase {
 
     func testURLEncoded() {
-        XCTAssertEqual(" ".urlEncoded!, "%20")
-        XCTAssertEqual("polyglot://".urlEncoded!, "polyglot%3A%2F%2F")
-        XCTAssertEqual("Spreek je Nederlands?".urlEncoded!, "Spreek%20je%20Nederlands%3F")
+        AssertEqualOptional(" ".urlEncoded, "%20")
+        AssertEqualOptional("polyglot://".urlEncoded, "polyglot%3A%2F%2F")
+        AssertEqualOptional("Spreek je Nederlands?".urlEncoded, "Spreek%20je%20Nederlands%3F")
     }
+
+    func AssertEqualOptional<T : Equatable>(optional: @autoclosure () -> T?, _ expected: @autoclosure () -> T, file: String = __FILE__, line: UInt = __LINE__) {
+        if let nonOptional = optional() {
+            if nonOptional != expected() {
+                self.recordFailureWithDescription("Optional (\(nonOptional)) is not equal to (\(expected()))", inFile: file, atLine: line, expected: true)
+            }
+        }
+        else {
+            self.recordFailureWithDescription("Optional value is empty", inFile: file, atLine: line, expected: true)
+        }
+    }
+
 }
