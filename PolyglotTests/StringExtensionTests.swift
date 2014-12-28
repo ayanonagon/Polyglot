@@ -27,8 +27,10 @@ class StringExtensionTests: XCTestCase {
 
     func testURLEncoded() {
         AssertEqualOptional(" ".urlEncoded, "%20")
-        AssertEqualOptional("polyglot://".urlEncoded, "polyglot%3A%2F%2F")
+        AssertEqualOptional("polyglot://".urlEncoded, "polyglot://")
         AssertEqualOptional("Spreek je Nederlands?".urlEncoded, "Spreek%20je%20Nederlands%3F")
+        AssertEqualOptional("1+1=2".urlEncoded, "1%2B1%3D2")
+        AssertEqualOptional("ampers&".urlEncoded, "ampers%26")
     }
 
     func AssertEqualOptional<T : Equatable>(optional: @autoclosure () -> T?, _ expected: @autoclosure () -> T, file: String = __FILE__, line: UInt = __LINE__) {

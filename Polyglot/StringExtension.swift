@@ -25,6 +25,8 @@ import Foundation
 public extension String {
 
     public var urlEncoded: String? {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
+        let urlQueryAllowedCharacterSet: NSMutableCharacterSet = NSCharacterSet.URLQueryAllowedCharacterSet().mutableCopy() as NSMutableCharacterSet
+        urlQueryAllowedCharacterSet.removeCharactersInString("&=?+")
+        return self.stringByAddingPercentEncodingWithAllowedCharacters(urlQueryAllowedCharacterSet)
     }
 }
