@@ -84,6 +84,7 @@ public class Polyglot {
 
     public func translate(text: String, callback: ((translation: String) -> (Void))) {
         self.session.getAccessToken { token in
+            self.fromLanguage = text.language
             let toLanguageComponent = "&to=\(self.toLanguage.rawValue.urlEncoded!)"
             let fromLanguageComponent = (self.fromLanguage != nil) ? "&from=\(self.fromLanguage!.rawValue.urlEncoded!)" : ""
             let urlString = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=\(text.urlEncoded!)\(toLanguageComponent)\(fromLanguageComponent)"
