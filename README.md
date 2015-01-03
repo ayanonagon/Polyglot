@@ -3,7 +3,7 @@ Polyglot
 
 [![Build Status](https://travis-ci.org/ayanonagon/Polyglot.svg)](https://travis-ci.org/ayanonagon/Polyglot)
 
-Swift wrapper around Microsoft Translate API. By default, it translates to English from whatever language is detected.
+Swift wrapper around the Microsoft Translator API. By default, it translates to English from whatever language is detected.
 
 ## Basic Usage
 
@@ -28,14 +28,14 @@ translator.translate(dutch) { translation in
 
 Check out the [sample project](https://github.com/ayanonagon/Polyglot/tree/master/PolyglotSample) for a quick demo.
 
-## Setting up an account for Microsoft Translate
+## Setting up an account for Microsoft Translator
 
-1. Subscribe to the Microsoft Translate service [here](https://datamarket.azure.com/dataset/bing/microsofttranslator). You’ll probably need to set up a new account first. Good luck. :trollface:
+1. Subscribe to the Microsoft Translator service [here](https://datamarket.azure.com/dataset/bing/microsofttranslator). You’ll probably need to set up a new account first. Good luck. :trollface:
 2. Create a new application [here](https://datamarket.azure.com/developer/applications). This is where you will be given a client ID and client secret (which you will need for using Polyglot).
 
 ## Dependencies
 
-Because Microsoft’s Translate API returns XML, Polyglot depends on [Ono](https://github.com/mattt/Ono). You should add it to your project however you like ([CocoaPods](http://cocoapods.org/) is recommended), and add it to your target’s [bridging header](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html). When CocoaPods fully supports Swift, this process will become a lot simpler. :octocat:
+Because the Microsoft Translator API returns XML, Polyglot depends on [Ono](https://github.com/mattt/Ono). You should add it to your project however you like ([CocoaPods](http://cocoapods.org/) is recommended), and add it to your target’s [bridging header](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/BuildingCocoaApps/MixandMatch.html). When CocoaPods fully supports Swift, this process will become a lot simpler.
 
 ## Contributing
 
