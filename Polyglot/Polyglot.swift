@@ -46,7 +46,7 @@ public enum Language: String {
     case Italian = "it"
     case Japanese = "ja"
     case Klingon = "tlh"
-    case KlingonPlqad = "tlh-Qaak"
+    case KlingonPiqad = "tlh-Qaak"
     case Korean = "ko"
     case Latvian = "lv"
     case Lithuanian = "lt"
