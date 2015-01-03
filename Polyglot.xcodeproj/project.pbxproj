@@ -31,9 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4917C48171EF41229D64EBB0 /* Pods-Polyglot.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polyglot.xcconfig"; path = "Pods/Pods-Polyglot.xcconfig"; sourceTree = "<group>"; };
+		6DA0562DA108EF356CDFD440 /* Pods-Polyglot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polyglot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Polyglot/Pods-Polyglot.debug.xcconfig"; sourceTree = "<group>"; };
 		9D2A1C66E5BE4AF5992C1C5A /* libPods-Polyglot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Polyglot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2FF8CDABF844572A15E87F3 /* Pods-PolyglotTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.xcconfig"; path = "Pods/Pods-PolyglotTests.xcconfig"; sourceTree = "<group>"; };
+		9E92673AFA5F7CBADAC1FEDA /* Pods-PolyglotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.release.xcconfig"; sourceTree = "<group>"; };
+		B5F07BE5F295F231099351A4 /* Pods-Polyglot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polyglot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Polyglot/Pods-Polyglot.release.xcconfig"; sourceTree = "<group>"; };
 		B60F87441985F1C200ABB94A /* Polyglot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polyglot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60F87561985F1C200ABB94A /* PolyglotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyglotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60F875B1985F1C200ABB94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		B67FC7911985F2600030ABF8 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B67FC7951985F2F20030ABF8 /* Polyglot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Polyglot-Bridging-Header.h"; sourceTree = "<group>"; };
 		BB19CEF8EC0A40F58A59831D /* libPods-PolyglotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolyglotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C23F5378C9CC528CA222C0 /* Pods-PolyglotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30FC16F3C54FFE655738ADE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DA0562DA108EF356CDFD440 /* Pods-Polyglot.debug.xcconfig */,
+				B5F07BE5F295F231099351A4 /* Pods-Polyglot.release.xcconfig */,
+				C7C23F5378C9CC528CA222C0 /* Pods-PolyglotTests.debug.xcconfig */,
+				9E92673AFA5F7CBADAC1FEDA /* Pods-PolyglotTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AD05005C88874F61B93358E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +101,8 @@
 				B67FC7821985F20B0030ABF8 /* PolyglotSample */,
 				B60F87591985F1C200ABB94A /* PolyglotTests */,
 				B60F87451985F1C200ABB94A /* Products */,
-				4917C48171EF41229D64EBB0 /* Pods-Polyglot.xcconfig */,
 				AD05005C88874F61B93358E3 /* Frameworks */,
-				B2FF8CDABF844572A15E87F3 /* Pods-PolyglotTests.xcconfig */,
+				30FC16F3C54FFE655738ADE4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,7 +268,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Polyglot-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Polyglot/Pods-Polyglot-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7570B0E02F3942C0A3FA3D83 /* Check Pods Manifest.lock */ = {
@@ -286,7 +298,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-PolyglotTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A7F8293FB9A64308990A56C7 /* Check Pods Manifest.lock */ = {
@@ -429,7 +441,7 @@
 		};
 		B60F87611985F1C200ABB94A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4917C48171EF41229D64EBB0 /* Pods-Polyglot.xcconfig */;
+			baseConfigurationReference = 6DA0562DA108EF356CDFD440 /* Pods-Polyglot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -444,7 +456,7 @@
 		};
 		B60F87621985F1C200ABB94A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4917C48171EF41229D64EBB0 /* Pods-Polyglot.xcconfig */;
+			baseConfigurationReference = B5F07BE5F295F231099351A4 /* Pods-Polyglot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -458,7 +470,7 @@
 		};
 		B60F87641985F1C200ABB94A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2FF8CDABF844572A15E87F3 /* Pods-PolyglotTests.xcconfig */;
+			baseConfigurationReference = C7C23F5378C9CC528CA222C0 /* Pods-PolyglotTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Polyglot.app/Polyglot";
 				CLANG_ENABLE_MODULES = YES;
@@ -481,7 +493,7 @@
 		};
 		B60F87651985F1C200ABB94A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2FF8CDABF844572A15E87F3 /* Pods-PolyglotTests.xcconfig */;
+			baseConfigurationReference = 9E92673AFA5F7CBADAC1FEDA /* Pods-PolyglotTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Polyglot.app/Polyglot";
 				CLANG_ENABLE_MODULES = YES;

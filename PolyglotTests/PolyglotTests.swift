@@ -26,9 +26,45 @@ import Polyglot
 
 class PolyglotTests: XCTestCase {
 
+    override func setUp() {
+        super.setUp()
+        LSNocilla.sharedInstance().start()
+    }
+
+    override func tearDown() {
+        super.tearDown()
+        LSNocilla.sharedInstance().clearStubs()
+        LSNocilla.sharedInstance().stop()
+    }
+
     func testInit() {
         let polyglot: Polyglot = Polyglot(clientId: "myClientId", clientSecret: "myClientSecret")
         XCTAssertNil(polyglot.fromLanguage?.rawValue)
         XCTAssertEqual(polyglot.toLanguage, Language.English)
+    }
+
+    func testTranslate() {
+        let expectation = expectationWithDescription("translation done")
+
+        // Stub POST access token
+        stubRequest("POST", "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13")
+        .withBody("client_id=myClientId&client_secret=myClientSecret&scope=http://api.microsofttranslator.com&grant_type=client_credentials".dataUsingEncoding(NSUTF8StringEncoding))
+        .andReturn(200)
+        .withHeaders(["Content-Type": "application/json"])
+        .withBody("{\"access_token\":\"octocatsruleeverythingaroundme\", \"expires_in\":\"600\"}")
+
+        // Stub GET translation
+        stubRequest("GET", "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=Ik%20weet%20het%20niet&to=en")
+        .withHeader("Authorization", "Bearer octocatsruleeverythingaroundme")
+        .andReturn(200)
+        .withBody("<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">I don't know</string>")
+
+        let polyglot: Polyglot = Polyglot(clientId: "myClientId", clientSecret: "myClientSecret")
+        polyglot.translate("Ik weet het niet", { translation in
+            XCTAssertEqual(translation, "I don't know")
+            expectation.fulfill()
+        });
+
+        waitForExpectationsWithTimeout(1, nil)
     }
 }

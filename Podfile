@@ -7,5 +7,6 @@ end
 
 target "PolyglotTests" do
   pod 'Ono', '~> 1.0'
+  pod 'Nocilla', '~> 0.9'
 end
 
