@@ -31,7 +31,7 @@ public extension String {
     }
     
     public var language: Language? {
-        if (countElements(self) > 1) { //Prevent Index Out of Bounds in NSLinguisticTagger
+        if (countElements(self) > 0) { //Prevent Index Out of Bounds in NSLinguisticTagger
             let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagSchemeLanguage], options: 0)
             tagger.string = self
             if let result = tagger.tagAtIndex(0, scheme: NSLinguisticTagSchemeLanguage, tokenRange: nil, sentenceRange: nil) {

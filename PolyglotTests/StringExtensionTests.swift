@@ -32,6 +32,12 @@ class StringExtensionTests: XCTestCase {
         AssertEqualOptional("1+1=2".urlEncoded, "1%2B1%3D2")
         AssertEqualOptional("ampers&".urlEncoded, "ampers%26")
     }
+    
+    func testLanguage() {
+        AssertEqualOptional("أنا بحب الشوكولا".language, Language.Arabic)
+        AssertEqualOptional("J' aime le chocolat".language, Language.French)
+        XCTAssertNil("".language?.rawValue, "Empty strings should return nil.")
+    }
 
     func AssertEqualOptional<T : Equatable>(optional: @autoclosure () -> T?, _ expected: @autoclosure () -> T, file: String = __FILE__, line: UInt = __LINE__) {
         if let nonOptional = optional() {
