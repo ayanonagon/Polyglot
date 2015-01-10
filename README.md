@@ -28,6 +28,57 @@ translator.translate(dutch) { translation in
 
 Check out the [sample project](https://github.com/ayanonagon/Polyglot/tree/master/PolyglotSample) for a quick demo.
 
+## Supported Languages
+This list will grow as Microsoft Translator’s list grows.
+
+| Supported languages |
+| ------------------- |
+| Arabic |
+| Bulgarian |
+| Catalan |
+| Chinese (Simplified) |
+| Chinese (Traditional) |
+| Czech |
+| Danish |
+| Dutch |
+| English |
+| Estonian |
+| Finnish |
+| French |
+| German |
+| Greek |
+| Haitian Creole |
+| Hebrew |
+| Hindi |
+| Hmong Daw |
+| Hungarian |
+| Indonesian |
+| Italian |
+| Japanese |
+| Klingon |
+| Klingon pIqaD |
+| Korean |
+| Latvian |
+| Lithuanian |
+| Malay |
+| Maltese |
+| Norwegian |
+| Persian |
+| Polish |
+| Portuguese |
+| Romanian |
+| Russian |
+| Slovak |
+| Slovenian |
+| Spanish |
+| Swedish |
+| Thai |
+| Turkish |
+| Ukrainian |
+| Urdu |
+| Vietnamese |
+| Welsh |
+
 ## Setting up an account for Microsoft Translator
 
 1. Subscribe to the Microsoft Translator service [here](https://datamarket.azure.com/dataset/bing/microsofttranslator). You’ll probably need to set up a new account first. Good luck. :trollface:

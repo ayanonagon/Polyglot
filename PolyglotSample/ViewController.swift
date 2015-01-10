@@ -24,7 +24,12 @@ class ViewController: UIViewController {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         self.translator?.translate(self.inputTextField.text) { translation in
             dispatch_async(dispatch_get_main_queue(), {
-                self.translationLabel.text = translation
+                if let language = self.translator?.fromLanguage?.rawValue {
+                    self.translationLabel.text = "Translated from \(language.capitalizedString): \(translation)"
+                }
+                else {
+                    self.translationLabel.text = translation
+                }
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
             })
         }
