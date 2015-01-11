@@ -94,8 +94,11 @@ public class Polyglot {
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
 
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
-                let document = ONOXMLDocument(data:data, error: nil)
-                let translation = document.rootElement.stringValue();
+                var translation = ""
+                if let xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) {
+                    translation = xmlString.stringByReplacingOccurrencesOfString("<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">", withString: "")
+                    translation = translation.stringByReplacingOccurrencesOfString("</string>", withString: "")
+                }
                 callback(translation: translation)
             }
             task.resume()

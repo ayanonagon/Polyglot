@@ -54,7 +54,7 @@ class PolyglotTests: XCTestCase {
         .withBody("{\"access_token\":\"octocatsruleeverythingaroundme\", \"expires_in\":\"600\"}")
 
         // Stub GET translation
-        stubRequest("GET", "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=Ik%20weet%20het%20niet&to=en")
+        stubRequest("GET", "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=Ik%20weet%20het%20niet&to=en&from=nl")
         .withHeader("Authorization", "Bearer octocatsruleeverythingaroundme")
         .andReturn(200)
         .withBody("<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">I don't know</string>")
