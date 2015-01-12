@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D406EF852544675BEEF8107 /* libPods-PolyglotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB19CEF8EC0A40F58A59831D /* libPods-PolyglotTests.a */; };
+		9D406EF852544675BEEF8107 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		A7634C05C88981A1045C6591 /* libPods-PolyglotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07330C87867A5F038972437C /* libPods-PolyglotTests.a */; };
 		B60F875D1985F1C200ABB94A /* PolyglotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F875C1985F1C200ABB94A /* PolyglotTests.swift */; };
 		B6156E3F1999D93B002CE52F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7841985F20B0030ABF8 /* Main.storyboard */; };
 		B6682231199C68AE00DFA909 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6682230199C68AE00DFA909 /* StringExtensionTests.swift */; };
@@ -17,7 +18,6 @@
 		B67FC7921985F2600030ABF8 /* Polyglot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC78F1985F2600030ABF8 /* Polyglot.swift */; };
 		B67FC7931985F2600030ABF8 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7901985F2600030ABF8 /* Session.swift */; };
 		B67FC7941985F2600030ABF8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7911985F2600030ABF8 /* StringExtension.swift */; };
-		C4E87E7A7737461FA04DAB32 /* libPods-Polyglot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2A1C66E5BE4AF5992C1C5A /* libPods-Polyglot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,10 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6DA0562DA108EF356CDFD440 /* Pods-Polyglot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polyglot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Polyglot/Pods-Polyglot.debug.xcconfig"; sourceTree = "<group>"; };
-		9D2A1C66E5BE4AF5992C1C5A /* libPods-Polyglot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Polyglot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E92673AFA5F7CBADAC1FEDA /* Pods-PolyglotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.release.xcconfig"; sourceTree = "<group>"; };
-		B5F07BE5F295F231099351A4 /* Pods-Polyglot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Polyglot.release.xcconfig"; path = "Pods/Target Support Files/Pods-Polyglot/Pods-Polyglot.release.xcconfig"; sourceTree = "<group>"; };
+		07330C87867A5F038972437C /* libPods-PolyglotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolyglotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E14CADB040ABB91E2581A33 /* Pods-PolyglotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B60F87441985F1C200ABB94A /* Polyglot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polyglot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60F87561985F1C200ABB94A /* PolyglotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyglotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60F875B1985F1C200ABB94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,8 +48,7 @@
 		B67FC7901985F2600030ABF8 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B67FC7911985F2600030ABF8 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B67FC7951985F2F20030ABF8 /* Polyglot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Polyglot-Bridging-Header.h"; sourceTree = "<group>"; };
-		BB19CEF8EC0A40F58A59831D /* libPods-PolyglotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolyglotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7C23F5378C9CC528CA222C0 /* Pods-PolyglotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F672BD22A3BCDB21A466B175 /* Pods-PolyglotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E87E7A7737461FA04DAB32 /* libPods-Polyglot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,20 +63,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D406EF852544675BEEF8107 /* libPods-PolyglotTests.a in Frameworks */,
+				9D406EF852544675BEEF8107 /* (null) in Frameworks */,
+				A7634C05C88981A1045C6591 /* libPods-PolyglotTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30FC16F3C54FFE655738ADE4 /* Pods */ = {
+		95C0AD45E0A97FB9039EE24E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6DA0562DA108EF356CDFD440 /* Pods-Polyglot.debug.xcconfig */,
-				B5F07BE5F295F231099351A4 /* Pods-Polyglot.release.xcconfig */,
-				C7C23F5378C9CC528CA222C0 /* Pods-PolyglotTests.debug.xcconfig */,
-				9E92673AFA5F7CBADAC1FEDA /* Pods-PolyglotTests.release.xcconfig */,
+				8E14CADB040ABB91E2581A33 /* Pods-PolyglotTests.debug.xcconfig */,
+				F672BD22A3BCDB21A466B175 /* Pods-PolyglotTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -88,8 +83,7 @@
 		AD05005C88874F61B93358E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D2A1C66E5BE4AF5992C1C5A /* libPods-Polyglot.a */,
-				BB19CEF8EC0A40F58A59831D /* libPods-PolyglotTests.a */,
+				07330C87867A5F038972437C /* libPods-PolyglotTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,7 +96,7 @@
 				B60F87591985F1C200ABB94A /* PolyglotTests */,
 				B60F87451985F1C200ABB94A /* Products */,
 				AD05005C88874F61B93358E3 /* Frameworks */,
-				30FC16F3C54FFE655738ADE4 /* Pods */,
+				95C0AD45E0A97FB9039EE24E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,11 +158,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B60F87601985F1C200ABB94A /* Build configuration list for PBXNativeTarget "Polyglot" */;
 			buildPhases = (
-				7570B0E02F3942C0A3FA3D83 /* Check Pods Manifest.lock */,
 				B60F87401985F1C200ABB94A /* Sources */,
 				B60F87411985F1C200ABB94A /* Frameworks */,
 				B60F87421985F1C200ABB94A /* Resources */,
-				14F464BCB76C48F5AE7E012F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,11 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B60F87631985F1C200ABB94A /* Build configuration list for PBXNativeTarget "PolyglotTests" */;
 			buildPhases = (
-				A7F8293FB9A64308990A56C7 /* Check Pods Manifest.lock */,
+				49DF38E74C7699C727B4F03A /* Check Pods Manifest.lock */,
 				B60F87521985F1C200ABB94A /* Sources */,
 				B60F87531985F1C200ABB94A /* Frameworks */,
 				B60F87541985F1C200ABB94A /* Resources */,
-				827118DF564F4C53941DCBF6 /* Copy Pods Resources */,
+				6CA99FEF6221E1100B4846DC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,22 +248,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14F464BCB76C48F5AE7E012F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Polyglot/Pods-Polyglot-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7570B0E02F3942C0A3FA3D83 /* Check Pods Manifest.lock */ = {
+		49DF38E74C7699C727B4F03A /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,7 +263,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		827118DF564F4C53941DCBF6 /* Copy Pods Resources */ = {
+		6CA99FEF6221E1100B4846DC /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,21 +276,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A7F8293FB9A64308990A56C7 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -441,7 +403,6 @@
 		};
 		B60F87611985F1C200ABB94A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DA0562DA108EF356CDFD440 /* Pods-Polyglot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -456,7 +417,6 @@
 		};
 		B60F87621985F1C200ABB94A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5F07BE5F295F231099351A4 /* Pods-Polyglot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -470,7 +430,7 @@
 		};
 		B60F87641985F1C200ABB94A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C7C23F5378C9CC528CA222C0 /* Pods-PolyglotTests.debug.xcconfig */;
+			baseConfigurationReference = 8E14CADB040ABB91E2581A33 /* Pods-PolyglotTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Polyglot.app/Polyglot";
 				CLANG_ENABLE_MODULES = YES;
@@ -493,7 +453,7 @@
 		};
 		B60F87651985F1C200ABB94A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E92673AFA5F7CBADAC1FEDA /* Pods-PolyglotTests.release.xcconfig */;
+			baseConfigurationReference = F672BD22A3BCDB21A466B175 /* Pods-PolyglotTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Polyglot.app/Polyglot";
 				CLANG_ENABLE_MODULES = YES;
