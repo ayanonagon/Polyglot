@@ -64,7 +64,7 @@ class PolyglotTests: XCTestCase {
         polyglot.translate("Ik weet het niet", { translation in
             XCTAssertEqual(translation, "I don't know")
             expectation.fulfill()
-        });
+        })
 
         waitForExpectationsWithTimeout(1, nil)
     }
