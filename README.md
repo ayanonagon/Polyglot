@@ -5,6 +5,16 @@ Polyglot
 
 Swift wrapper around the Microsoft Translator API. By default, it translates to English from whatever language is detected.
 
+## Installation
+
+The easiest way to get started is to use CocoaPods if you have a version of it that supports Swift (0.36, currently prerelease). Just add the following line to your Podfile:
+
+```ruby
+pod 'Polyglot', '~> 0.3'
+```
+
+Otherwise, just include the contents of the `Polyglot` folder manually to your project.
+
 ## Basic Usage
 
 Create a new ```Polyglot``` instance.
