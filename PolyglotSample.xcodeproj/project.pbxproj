@@ -7,33 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D406EF852544675BEEF8107 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		A7634C05C88981A1045C6591 /* libPods-PolyglotTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07330C87867A5F038972437C /* libPods-PolyglotTests.a */; };
+		6BF86B27E801452077EAF608 /* Pods_PolyglotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925AA115444C33786930F106 /* Pods_PolyglotTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		76E093B31C869D9803863B0A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9A4E55DA20E420F9D1A394 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B60F875D1985F1C200ABB94A /* PolyglotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F875C1985F1C200ABB94A /* PolyglotTests.swift */; };
 		B6156E3F1999D93B002CE52F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7841985F20B0030ABF8 /* Main.storyboard */; };
 		B6682231199C68AE00DFA909 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6682230199C68AE00DFA909 /* StringExtensionTests.swift */; };
 		B67FC7891985F20B0030ABF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7831985F20B0030ABF8 /* AppDelegate.swift */; };
 		B67FC78B1985F20B0030ABF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7861985F20B0030ABF8 /* Images.xcassets */; };
 		B67FC78D1985F20B0030ABF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7881985F20B0030ABF8 /* ViewController.swift */; };
-		B67FC7921985F2600030ABF8 /* Polyglot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC78F1985F2600030ABF8 /* Polyglot.swift */; };
-		B67FC7931985F2600030ABF8 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7901985F2600030ABF8 /* Session.swift */; };
-		B67FC7941985F2600030ABF8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67FC7911985F2600030ABF8 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B60F87571985F1C200ABB94A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B60F873C1985F1C200ABB94A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B60F87431985F1C200ABB94A;
-			remoteInfo = Polyglot;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		07330C87867A5F038972437C /* libPods-PolyglotTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PolyglotTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E14CADB040ABB91E2581A33 /* Pods-PolyglotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B60F87441985F1C200ABB94A /* Polyglot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polyglot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		169250360E8B162C09FEC696 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		18EAC8F54FC94B5025FBB495 /* Pods-PolyglotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B2717494CE9EFC17436B68F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		906A23634E280AEDC1BA250B /* Pods-PolyglotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.release.xcconfig"; sourceTree = "<group>"; };
+		925AA115444C33786930F106 /* Pods_PolyglotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PolyglotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60F87441985F1C200ABB94A /* PolyglotSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyglotSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60F87561985F1C200ABB94A /* PolyglotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolyglotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B60F875B1985F1C200ABB94A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B60F875C1985F1C200ABB94A /* PolyglotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolyglotTests.swift; sourceTree = "<group>"; };
@@ -44,11 +34,8 @@
 		B67FC7861985F20B0030ABF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B67FC7871985F20B0030ABF8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67FC7881985F20B0030ABF8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B67FC78F1985F2600030ABF8 /* Polyglot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Polyglot.swift; sourceTree = "<group>"; };
-		B67FC7901985F2600030ABF8 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		B67FC7911985F2600030ABF8 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B67FC7951985F2F20030ABF8 /* Polyglot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Polyglot-Bridging-Header.h"; sourceTree = "<group>"; };
-		F672BD22A3BCDB21A466B175 /* Pods-PolyglotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PolyglotTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB9A4E55DA20E420F9D1A394 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E093B31C869D9803863B0A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,19 +51,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D406EF852544675BEEF8107 /* (null) in Frameworks */,
-				A7634C05C88981A1045C6591 /* libPods-PolyglotTests.a in Frameworks */,
+				6BF86B27E801452077EAF608 /* Pods_PolyglotTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		95C0AD45E0A97FB9039EE24E /* Pods */ = {
+		1BC459906112AA6B922B0A50 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8E14CADB040ABB91E2581A33 /* Pods-PolyglotTests.debug.xcconfig */,
-				F672BD22A3BCDB21A466B175 /* Pods-PolyglotTests.release.xcconfig */,
+				169250360E8B162C09FEC696 /* Pods.debug.xcconfig */,
+				7B2717494CE9EFC17436B68F /* Pods.release.xcconfig */,
+				18EAC8F54FC94B5025FBB495 /* Pods-PolyglotTests.debug.xcconfig */,
+				906A23634E280AEDC1BA250B /* Pods-PolyglotTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -83,7 +72,8 @@
 		AD05005C88874F61B93358E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				07330C87867A5F038972437C /* libPods-PolyglotTests.a */,
+				DB9A4E55DA20E420F9D1A394 /* Pods.framework */,
+				925AA115444C33786930F106 /* Pods_PolyglotTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,19 +81,18 @@
 		B60F873B1985F1C200ABB94A = {
 			isa = PBXGroup;
 			children = (
-				B67FC78E1985F2600030ABF8 /* Polyglot */,
 				B67FC7821985F20B0030ABF8 /* PolyglotSample */,
 				B60F87591985F1C200ABB94A /* PolyglotTests */,
 				B60F87451985F1C200ABB94A /* Products */,
 				AD05005C88874F61B93358E3 /* Frameworks */,
-				95C0AD45E0A97FB9039EE24E /* Pods */,
+				1BC459906112AA6B922B0A50 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		B60F87451985F1C200ABB94A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B60F87441985F1C200ABB94A /* Polyglot.app */,
+				B60F87441985F1C200ABB94A /* PolyglotSample.app */,
 				B60F87561985F1C200ABB94A /* PolyglotTests.xctest */,
 			);
 			name = Products;
@@ -141,50 +130,41 @@
 			path = PolyglotSample;
 			sourceTree = "<group>";
 		};
-		B67FC78E1985F2600030ABF8 /* Polyglot */ = {
-			isa = PBXGroup;
-			children = (
-				B67FC78F1985F2600030ABF8 /* Polyglot.swift */,
-				B67FC7901985F2600030ABF8 /* Session.swift */,
-				B67FC7911985F2600030ABF8 /* StringExtension.swift */,
-			);
-			path = Polyglot;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B60F87431985F1C200ABB94A /* Polyglot */ = {
+		B60F87431985F1C200ABB94A /* PolyglotSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B60F87601985F1C200ABB94A /* Build configuration list for PBXNativeTarget "Polyglot" */;
+			buildConfigurationList = B60F87601985F1C200ABB94A /* Build configuration list for PBXNativeTarget "PolyglotSample" */;
 			buildPhases = (
 				B60F87401985F1C200ABB94A /* Sources */,
 				B60F87411985F1C200ABB94A /* Frameworks */,
 				B60F87421985F1C200ABB94A /* Resources */,
+				2C89B4C9E4725608B65AFC36 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Polyglot;
+			name = PolyglotSample;
 			productName = Polyglot;
-			productReference = B60F87441985F1C200ABB94A /* Polyglot.app */;
+			productReference = B60F87441985F1C200ABB94A /* PolyglotSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B60F87551985F1C200ABB94A /* PolyglotTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B60F87631985F1C200ABB94A /* Build configuration list for PBXNativeTarget "PolyglotTests" */;
 			buildPhases = (
-				49DF38E74C7699C727B4F03A /* Check Pods Manifest.lock */,
+				408E75F29D9B38C4B9827AB7 /* Check Pods Manifest.lock */,
 				B60F87521985F1C200ABB94A /* Sources */,
 				B60F87531985F1C200ABB94A /* Frameworks */,
 				B60F87541985F1C200ABB94A /* Resources */,
-				6CA99FEF6221E1100B4846DC /* Copy Pods Resources */,
+				9C872251D11A74FF863B9D27 /* Embed Pods Frameworks */,
+				CEE1C2C59E9D00E35BF90D16 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B60F87581985F1C200ABB94A /* PBXTargetDependency */,
 			);
 			name = PolyglotTests;
 			productName = PolyglotTests;
@@ -209,7 +189,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B60F873F1985F1C200ABB94A /* Build configuration list for PBXProject "Polyglot" */;
+			buildConfigurationList = B60F873F1985F1C200ABB94A /* Build configuration list for PBXProject "PolyglotSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -222,7 +202,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B60F87431985F1C200ABB94A /* Polyglot */,
+				B60F87431985F1C200ABB94A /* PolyglotSample */,
 				B60F87551985F1C200ABB94A /* PolyglotTests */,
 			);
 		};
@@ -248,7 +228,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		49DF38E74C7699C727B4F03A /* Check Pods Manifest.lock */ = {
+		2C89B4C9E4725608B65AFC36 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		408E75F29D9B38C4B9827AB7 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,7 +258,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6CA99FEF6221E1100B4846DC /* Copy Pods Resources */ = {
+		9C872251D11A74FF863B9D27 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PolyglotTests/Pods-PolyglotTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE1C2C59E9D00E35BF90D16 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,9 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67FC7931985F2600030ABF8 /* Session.swift in Sources */,
-				B67FC7921985F2600030ABF8 /* Polyglot.swift in Sources */,
-				B67FC7941985F2600030ABF8 /* StringExtension.swift in Sources */,
 				B67FC7891985F20B0030ABF8 /* AppDelegate.swift in Sources */,
 				B67FC78D1985F20B0030ABF8 /* ViewController.swift in Sources */,
 			);
@@ -303,14 +310,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B60F87581985F1C200ABB94A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B60F87431985F1C200ABB94A /* Polyglot */;
-			targetProxy = B60F87571985F1C200ABB94A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B67FC7841985F20B0030ABF8 /* Main.storyboard */ = {
@@ -403,13 +402,14 @@
 		};
 		B60F87611985F1C200ABB94A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 169250360E8B162C09FEC696 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PolyglotSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PolyglotSample;
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotSample/Polyglot-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -417,22 +417,23 @@
 		};
 		B60F87621985F1C200ABB94A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B2717494CE9EFC17436B68F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PolyglotSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PolyglotSample;
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotSample/Polyglot-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		B60F87641985F1C200ABB94A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E14CADB040ABB91E2581A33 /* Pods-PolyglotTests.debug.xcconfig */;
+			baseConfigurationReference = 18EAC8F54FC94B5025FBB495 /* Pods-PolyglotTests.debug.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Polyglot.app/Polyglot";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PolyglotSample.app/PolyglotSample";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -453,9 +454,9 @@
 		};
 		B60F87651985F1C200ABB94A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F672BD22A3BCDB21A466B175 /* Pods-PolyglotTests.release.xcconfig */;
+			baseConfigurationReference = 906A23634E280AEDC1BA250B /* Pods-PolyglotTests.release.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Polyglot.app/Polyglot";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PolyglotSample.app/PolyglotSample";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -472,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B60F873F1985F1C200ABB94A /* Build configuration list for PBXProject "Polyglot" */ = {
+		B60F873F1985F1C200ABB94A /* Build configuration list for PBXProject "PolyglotSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B60F875E1985F1C200ABB94A /* Debug */,
@@ -481,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B60F87601985F1C200ABB94A /* Build configuration list for PBXNativeTarget "Polyglot" */ = {
+		B60F87601985F1C200ABB94A /* Build configuration list for PBXNativeTarget "PolyglotSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B60F87611985F1C200ABB94A /* Debug */,

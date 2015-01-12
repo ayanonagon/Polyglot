@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Polyglot
 
 class ViewController: UIViewController {
 

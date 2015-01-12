@@ -23,6 +23,7 @@
 import UIKit
 import XCTest
 import Polyglot
+import Nocilla
 
 class PolyglotTests: XCTestCase {
 

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B60F87431985F1C200ABB94A"
-               BuildableName = "Polyglot.app"
-               BlueprintName = "Polyglot"
-               ReferencedContainer = "container:Polyglot.xcodeproj">
+               BuildableName = "PolyglotSample.app"
+               BlueprintName = "PolyglotSample"
+               ReferencedContainer = "container:PolyglotSample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "B60F87551985F1C200ABB94A"
                BuildableName = "PolyglotTests.xctest"
                BlueprintName = "PolyglotTests"
-               ReferencedContainer = "container:Polyglot.xcodeproj">
+               ReferencedContainer = "container:PolyglotSample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B60F87431985F1C200ABB94A"
-            BuildableName = "Polyglot.app"
-            BlueprintName = "Polyglot"
-            ReferencedContainer = "container:Polyglot.xcodeproj">
+            BuildableName = "PolyglotSample.app"
+            BlueprintName = "PolyglotSample"
+            ReferencedContainer = "container:PolyglotSample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B60F87431985F1C200ABB94A"
-            BuildableName = "Polyglot.app"
-            BlueprintName = "Polyglot"
-            ReferencedContainer = "container:Polyglot.xcodeproj">
+            BuildableName = "PolyglotSample.app"
+            BlueprintName = "PolyglotSample"
+            ReferencedContainer = "container:PolyglotSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B60F87431985F1C200ABB94A"
-            BuildableName = "Polyglot.app"
-            BlueprintName = "Polyglot"
-            ReferencedContainer = "container:Polyglot.xcodeproj">
+            BuildableName = "PolyglotSample.app"
+            BlueprintName = "PolyglotSample"
+            ReferencedContainer = "container:PolyglotSample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
