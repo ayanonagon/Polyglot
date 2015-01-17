@@ -22,7 +22,7 @@
 
 import Foundation
 
-public extension String {
+extension String {
 
     public var urlEncoded: String? {
         let urlQueryAllowedCharacterSet: NSMutableCharacterSet = NSCharacterSet.URLQueryAllowedCharacterSet().mutableCopy() as NSMutableCharacterSet
