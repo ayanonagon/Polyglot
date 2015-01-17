@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name  = 'Polyglot'
-  s.version = '0.3.0'
+  s.version = '0.3.1'
   s.platform  = :ios, '8.0'
   s.requires_arc = true
 
