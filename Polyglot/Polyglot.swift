@@ -22,6 +22,9 @@
 
 import Foundation
 
+/**
+    Supported languages.
+*/
 public enum Language: String {
     case Arabic = "ar"
     case Bulgarian = "bg"
@@ -70,18 +73,35 @@ public enum Language: String {
     case Welsh = "cy"
 }
 
+/**
+    Responsible for translating text.
+*/
 public class Polyglot {
 
     let session: Session
 
+    /// The language to be translated from. It will automatically detect the language if you do not set this.
+    ///
     public var fromLanguage: Language?
+
+    /// The language to translate to.
     public var toLanguage: Language
 
+
+    /**
+        :param: clientId Microsoft Translator client ID.
+        :param: clientSecret Microsoft Translator client secret.
+    */
     public init(clientId: String, clientSecret: String) {
         self.session = Session(clientId: clientId, clientSecret: clientSecret)
         self.toLanguage = Language.English
     }
 
+    /**
+        Translates a given piece of text.
+        :param: text The text to translate.
+        :param: callback The code to be executed once the translation has completed.
+    */
     public func translate(text: String, callback: ((translation: String) -> (Void))) {
         self.session.getAccessToken { token in
             self.fromLanguage = text.language
