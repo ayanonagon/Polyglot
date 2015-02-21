@@ -13,7 +13,7 @@ The easiest way to get started is to use CocoaPods if you have a version of it t
 pod 'Polyglot', '~> 0.3'
 ```
 
-Otherwise, just include the contents of the `Polyglot` folder manually to your project.
+Otherwise, just include the contents of the `Polyglot` directory manually to your project.
 
 ## Basic Usage
 
