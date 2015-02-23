@@ -25,13 +25,13 @@ import Foundation
 extension String {
 
     public var urlEncoded: String? {
-        let urlQueryAllowedCharacterSet: NSMutableCharacterSet = NSCharacterSet.URLQueryAllowedCharacterSet().mutableCopy() as NSMutableCharacterSet
+        let urlQueryAllowedCharacterSet: NSMutableCharacterSet = NSCharacterSet.URLQueryAllowedCharacterSet().mutableCopy() as! NSMutableCharacterSet
         urlQueryAllowedCharacterSet.removeCharactersInString("&=?+")
         return self.stringByAddingPercentEncodingWithAllowedCharacters(urlQueryAllowedCharacterSet)
     }
     
     public var language: Language? {
-        if (countElements(self) > 0) { // Prevent Index Out of Bounds in NSLinguisticTagger
+        if (count(self) > 0) { // Prevent Index Out of Bounds in NSLinguisticTagger
             let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagSchemeLanguage], options: 0)
             tagger.string = self
             if let result = tagger.tagAtIndex(0, scheme: NSLinguisticTagSchemeLanguage, tokenRange: nil, sentenceRange: nil) {

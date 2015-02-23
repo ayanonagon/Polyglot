@@ -46,12 +46,12 @@ class Session {
             request.HTTPBody = bodyString.dataUsingEncoding(NSUTF8StringEncoding)
 
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
-                let resultsDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+                let resultsDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
 
-                let expiresIn = resultsDict["expires_in"] as NSString
+                let expiresIn = resultsDict["expires_in"] as! NSString
                 self.expirationTime = NSDate(timeIntervalSinceNow: expiresIn.doubleValue)
 
-                let token = resultsDict["access_token"] as String
+                let token = resultsDict["access_token"] as! String
                 self.accessToken = token
 
                 callback(token: token)

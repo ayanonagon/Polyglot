@@ -1,6 +1,6 @@
 PODS:
   - Nocilla (0.9.0)
-  - Polyglot (0.3.4)
+  - Polyglot (0.4.0)
 
 DEPENDENCIES:
   - Nocilla (~> 0.9)
@@ -12,6 +12,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Nocilla: 4d713c56e7357fd0cac0363854d4a58021ad3f41
-  Polyglot: 6e58416a214154f065dee1ef026d6f6027f6a2e5
+  Polyglot: dddf99978e893f05bd9f3461922de8958f41480b
 
-COCOAPODS: 0.36.0.beta.1
+COCOAPODS: 0.36.0.beta.2

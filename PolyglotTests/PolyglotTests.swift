@@ -61,11 +61,11 @@ class PolyglotTests: XCTestCase {
         .withBody("<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">I don't know</string>")
 
         let polyglot: Polyglot = Polyglot(clientId: "myClientId", clientSecret: "myClientSecret")
-        polyglot.translate("Ik weet het niet", { translation in
+        polyglot.translate("Ik weet het niet") { translation in
             XCTAssertEqual(translation, "I don't know")
             expectation.fulfill()
-        })
+        }
 
-        waitForExpectationsWithTimeout(1, nil)
+        waitForExpectationsWithTimeout(1, handler: nil)
     }
 }
