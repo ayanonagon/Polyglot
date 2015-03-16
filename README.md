@@ -7,7 +7,7 @@ Swift wrapper around the Microsoft Translator API. By default, it translates to 
 
 ## Installation
 
-The easiest way to get started is to use CocoaPods if you have a version of it that supports Swift (0.36, currently prerelease). Just add the following line to your Podfile:
+The easiest way to get started is to use CocoaPods. Just add the following line to your Podfile:
 
 ```ruby
 pod 'Polyglot', '~> 0.3'
