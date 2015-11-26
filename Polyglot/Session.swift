@@ -36,7 +36,7 @@ class Session {
     }
 
     func getAccessToken(callback: ((token: String) -> (Void))) {
-        if ((self.accessToken == nil) || self.isExpired) {
+        if (accessToken == nil || isExpired) {
             let url = NSURL(string: "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13")
 
             let request = NSMutableURLRequest(URL: url!)
@@ -46,9 +46,14 @@ class Session {
             request.HTTPBody = bodyString.dataUsingEncoding(NSUTF8StringEncoding)
 
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
-                let resultsDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-
-                let expiresIn = resultsDict["expires_in"] as! NSString
+                guard
+                    let data = data,
+                    let resultsDict = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers),
+                    let expiresIn = resultsDict["expires_in"] as? NSString
+                else {
+                    callback(token: "")
+                    return
+                }
                 self.expirationTime = NSDate(timeIntervalSinceNow: expiresIn.doubleValue)
 
                 let token = resultsDict["access_token"] as! String
@@ -59,11 +64,11 @@ class Session {
 
             task.resume()
         } else {
-            callback(token: self.accessToken!)
+            callback(token: accessToken!)
         }
     }
 
     private var isExpired: Bool {
-        return self.expirationTime?.earlierDate(NSDate()) == self.expirationTime
+        return expirationTime?.earlierDate(NSDate()) == self.expirationTime
     }
 }
