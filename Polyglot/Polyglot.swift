@@ -88,22 +88,22 @@ public class Polyglot {
 
 
     /**
-        :param: clientId Microsoft Translator client ID.
-        :param: clientSecret Microsoft Translator client secret.
+        - parameter clientId: Microsoft Translator client ID.
+        - parameter clientSecret: Microsoft Translator client secret.
     */
     public init(clientId: String, clientSecret: String) {
-        self.session = Session(clientId: clientId, clientSecret: clientSecret)
-        self.toLanguage = Language.English
+        session = Session(clientId: clientId, clientSecret: clientSecret)
+        toLanguage = Language.English
     }
 
     /**
         Translates a given piece of text.
 
-        :param: text The text to translate.
-        :param: callback The code to be executed once the translation has completed.
+        - parameter text: The text to translate.
+        - parameter callback: The code to be executed once the translation has completed.
     */
     public func translate(text: String, callback: ((translation: String) -> (Void))) {
-        self.session.getAccessToken { token in
+        session.getAccessToken { token in
             self.fromLanguage = text.language
             let toLanguageComponent = "&to=\(self.toLanguage.rawValue.urlEncoded!)"
             let fromLanguageComponent = (self.fromLanguage != nil) ? "&from=\(self.fromLanguage!.rawValue.urlEncoded!)" : ""
@@ -114,14 +114,29 @@ public class Polyglot {
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
 
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
-                var translation = ""
-                if let xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) {
-                    translation = xmlString.stringByReplacingOccurrencesOfString("<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">", withString: "")
-                    translation = translation.stringByReplacingOccurrencesOfString("</string>", withString: "")
+                let translation: String
+                guard
+                    let data = data,
+                    let xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) as? String
+                else {
+                    translation = ""
+                    return
                 }
-                callback(translation: translation)
+
+                translation = self.translationFromXML(xmlString)
+
+                defer {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        callback(translation: translation)
+                    }
+                }
             }
             task.resume()
         }
+    }
+
+    private func translationFromXML(XML: String) -> String {
+        let translation = XML.stringByReplacingOccurrencesOfString("<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">", withString: "")
+        return translation.stringByReplacingOccurrencesOfString("</string>", withString: "")
     }
 }
