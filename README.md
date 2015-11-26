@@ -10,7 +10,7 @@ Swift wrapper around the Microsoft Translator API. By default, it translates to 
 The easiest way to get started is to use CocoaPods. Just add the following line to your Podfile:
 
 ```ruby
-pod 'Polyglot', '~> 0.3'
+pod 'Polyglot', '~> 0.5'
 ```
 
 Otherwise, just include the contents of the `Polyglot` directory manually to your project.
