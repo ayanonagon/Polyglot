@@ -35,7 +35,7 @@ Start translating.
 ```swift
 let dutch = "Ik weet het niet."
 translator.translate(dutch) { translation in
-    println("\"\(dutch)\" means \"\(translation)\"")
+    print("\"\(dutch)\" means \"\(translation)\"")
 }
 ```
 
