@@ -45,7 +45,8 @@ class ViewController: UIViewController {
         guard let text = inputTextField.text else { return }
 
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        translator.translate(text) { translation in
+        
+        translator.translate(text) { translation, error in
             if let language = self.translator.fromLanguage?.rawValue {
                 self.translationLabel.text = "Translated from \(language.capitalizedString): \(translation)"
             }

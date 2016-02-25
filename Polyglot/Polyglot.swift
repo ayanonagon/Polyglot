@@ -77,66 +77,79 @@ public enum Language: String {
     Responsible for translating text.
 */
 public class Polyglot {
-
+    
     let session: Session
-
+    
     /// The language to be translated from. It will automatically detect the language if you do not set this.
     public var fromLanguage: Language?
-
+    
     /// The language to translate to.
     public var toLanguage: Language
-
-
+    
+    
     /**
-        - parameter clientId: Microsoft Translator client ID.
-        - parameter clientSecret: Microsoft Translator client secret.
-    */
+     - parameter clientId: Microsoft Translator client ID.
+     - parameter clientSecret: Microsoft Translator client secret.
+     */
     public init(clientId: String, clientSecret: String) {
         session = Session(clientId: clientId, clientSecret: clientSecret)
         toLanguage = Language.English
     }
-
+    
     /**
-        Translates a given piece of text.
-
-        - parameter text: The text to translate.
-        - parameter callback: The code to be executed once the translation has completed.
-    */
-    public func translate(text: String, callback: ((translation: String) -> (Void))) {
+     Translates a given piece of text.
+     
+     - parameter text: The text to translate.
+     - parameter callback: The code to be executed once the translation has completed.
+     */
+    public func translate(text: String, callback: ((translation: String?, error: TranslationError?) -> (Void))) {
         session.getAccessToken { token in
             self.fromLanguage = text.language
             let toLanguageComponent = "&to=\(self.toLanguage.rawValue.urlEncoded!)"
             let fromLanguageComponent = (self.fromLanguage != nil) ? "&from=\(self.fromLanguage!.rawValue.urlEncoded!)" : ""
             let urlString = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=\(text.urlEncoded!)\(toLanguageComponent)\(fromLanguageComponent)"
-
+            
             let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
             request.HTTPMethod = "GET"
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
-
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
-                let translation: String
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
+                let translation: String?
                 guard
                     let data = data,
                     let xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) as? String
-                else {
-                    translation = ""
-                    return
+                    else {
+                        translation = nil
+                        
+                        guard
+                            let error = error
+                            else {
+                                callback(translation: translation, error: nil)
+                                return
+                        }
+                        
+                        callback(translation: translation, error: .SessionError(error))
+                        return
                 }
-
+                
                 translation = self.translationFromXML(xmlString)
-
+                
                 defer {
                     dispatch_async(dispatch_get_main_queue()) {
-                        callback(translation: translation)
+                        callback(translation: translation, error: nil)
                     }
                 }
             }
             task.resume()
         }
     }
-
+    
     private func translationFromXML(XML: String) -> String {
         let translation = XML.stringByReplacingOccurrencesOfString("<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">", withString: "")
         return translation.stringByReplacingOccurrencesOfString("</string>", withString: "")
     }
+}
+
+public enum TranslationError : ErrorType {
+    case SessionError(NSError)
 }
