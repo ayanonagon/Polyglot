@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6BF86B27E801452077EAF608 /* Pods_PolyglotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925AA115444C33786930F106 /* Pods_PolyglotTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		76E093B31C869D9803863B0A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9A4E55DA20E420F9D1A394 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6BF86B27E801452077EAF608 /* Pods_PolyglotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925AA115444C33786930F106 /* Pods_PolyglotTests.framework */; };
+		76E093B31C869D9803863B0A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9A4E55DA20E420F9D1A394 /* Pods.framework */; };
 		B60F875D1985F1C200ABB94A /* PolyglotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F875C1985F1C200ABB94A /* PolyglotTests.swift */; };
 		B6156E3F1999D93B002CE52F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7841985F20B0030ABF8 /* Main.storyboard */; };
 		B6682231199C68AE00DFA909 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6682230199C68AE00DFA909 /* StringExtensionTests.swift */; };
@@ -177,6 +177,8 @@
 		B60F873C1985F1C200ABB94A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Ayaka Nonaka";
 				TargetAttributes = {
