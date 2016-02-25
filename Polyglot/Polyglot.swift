@@ -80,11 +80,11 @@ public enum Language: String {
         - parameter region:     The region, e.g. 'GB' or 'Hans'.
         - returns:              The Microsoft Translator API language defined in Polyglot via an enumeration.
     */
-    public static func forLocale(language language: String, region: String?) -> Language? {
+    public static func languageForLocale(languageCode langCode: String, region: String?) -> Language? {
         
         if let region = region {
             
-            switch (language, region) {
+            switch (langCode, region) {
             case ("zh", "Hans"):
                 return Language.ChineseSimplified
             case ("zh", "Hant"):
@@ -94,11 +94,11 @@ public enum Language: String {
             }
         }
         
-        switch language {
+        switch langCode {
         case "nb":
             return Language.Norwegian
         default:
-            return Language(rawValue: language)
+            return Language(rawValue: langCode)
         }
         
     }
