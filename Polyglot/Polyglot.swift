@@ -123,12 +123,16 @@ public class Polyglot {
                         
                         guard
                             let error = error
-                            else {
+                        else {
+                            dispatch_async(dispatch_get_main_queue()) {
                                 callback(translation: translation, error: nil)
-                                return
+                            }
+                            return
                         }
                         
-                        callback(translation: translation, error: .SessionError(error))
+                        dispatch_async(dispatch_get_main_queue()) {
+                            callback(translation: translation, error: .SessionError(error))
+                        }
                         return
                 }
                 
