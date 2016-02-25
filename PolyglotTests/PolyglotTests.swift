@@ -57,6 +57,9 @@ class PolyglotTests: XCTestCase {
             (langCode: "zh", region: "Hans",    expectedLanguage: Language.ChineseSimplified),
             (langCode: "zh", region: "Hant",    expectedLanguage: Language.ChineseTraditional),
             (langCode: "ja", region: nil,       expectedLanguage: Language.Japanese),
+            (langCode: "sr", region: nil,       expectedLanguage: Language.Serbian),
+            (langCode: "sr", region: "Latn",    expectedLanguage: Language.SerbianLatin),
+            (langCode: "sr", region: "Cyrl",    expectedLanguage: Language.SerbianCyrillic),
             (langCode: "xy", region: nil,       expectedLanguage: nil),
             (langCode: "xy", region: "TEST",    expectedLanguage: nil)
         ]
