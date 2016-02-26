@@ -170,7 +170,9 @@ public class Polyglot {
                 translation = self.translationFromXML(xmlString)
 
                 defer {
-                    callback(translation: translation)
+                    dispatch_async(dispatch_get_main_queue()) {
+                        callback(translation: translation)
+                    }   
                 }
             }
             task.resume()
