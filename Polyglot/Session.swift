@@ -44,19 +44,32 @@ class Session {
 
             let bodyString = "client_id=\(clientId.urlEncoded!)&client_secret=\(clientSecret.urlEncoded!)&scope=http://api.microsofttranslator.com&grant_type=client_credentials"
             request.HTTPBody = bodyString.dataUsingEncoding(NSUTF8StringEncoding)
-
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
-                let resultsDict: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-
-                let expiresIn = resultsDict["expires_in"] as! NSString
-                self.expirationTime = NSDate(timeIntervalSinceNow: expiresIn.doubleValue)
-
-                let token = resultsDict["access_token"] as! String
-                self.accessToken = token
-
-                callback(token: token)
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+                (data, response, error) in
+                
+                if let isError = error {
+                    NSLog("Error: %@", isError)
+                }
+                guard let data = data else {
+                    NSLog("No data")
+                    return
+                }
+                
+                do {
+                    let resultsDict: NSDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                    
+                    let expiresIn = resultsDict["expires_in"] as! NSString
+                    self.expirationTime = NSDate(timeIntervalSinceNow: expiresIn.doubleValue)
+                    
+                    let token = resultsDict["access_token"] as! String
+                    self.accessToken = token
+                    
+                    callback(token: token)
+                } catch {
+                    NSLog("Error: \(error)")
+                }
             }
-
             task.resume()
         } else {
             callback(token: self.accessToken!)

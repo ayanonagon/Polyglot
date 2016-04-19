@@ -48,7 +48,7 @@ class ViewController: UIViewController {
 
     @IBAction func didTapTranslateButton(sender: AnyObject) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        self.translator?.translate(self.inputTextField.text) { translation in
+        self.translator?.translate(self.inputTextField.text!) { translation in
             dispatch_async(dispatch_get_main_queue(), {
                 if let language = self.translator?.fromLanguage?.rawValue {
                     self.translationLabel.text = "Translated from \(language.capitalizedString): \(translation)"
