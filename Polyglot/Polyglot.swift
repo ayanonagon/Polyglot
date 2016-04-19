@@ -113,34 +113,21 @@ public class Polyglot {
             request.HTTPMethod = "GET"
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
             
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
-                let translation: String?
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+                (data, response, error) in
+                
+                var translation : String?
                 guard
                     let data = data,
                     let xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) as? String
-                    else {
-                        translation = nil
-                        
-                        guard
-                            let error = error
-                            else {
-                                dispatch_async(dispatch_get_main_queue()) {
-                                    callback(translation: translation, error: nil)
-                                }
-                                return
-                        }
-                        
-                        dispatch_async(dispatch_get_main_queue()) {
-                            callback(translation: translation, error: .SessionError(error))
-                        }
-                        return
-                }
+                else { return }
                 
                 translation = self.translationFromXML(xmlString)
                 
                 defer {
                     dispatch_async(dispatch_get_main_queue()) {
-                        callback(translation: translation, error: nil)
+                        callback(translation: translation,
+                            error: (error != nil) ? .SessionError(error!) : nil)
                     }
                 }
             }
