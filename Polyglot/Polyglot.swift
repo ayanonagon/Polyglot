@@ -116,20 +116,20 @@ public class Polyglot {
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
                 (data, response, error) in
                 
+                let error: TranslationError? = (error != nil) ? .SessionError(error!) : nil
                 var translation : String?
-                guard
-                    let data = data,
-                    let xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) as? String
-                else { return }
-                
-                translation = self.translationFromXML(xmlString)
                 
                 defer {
                     dispatch_async(dispatch_get_main_queue()) {
-                        callback(translation: translation,
-                            error: (error != nil) ? .SessionError(error!) : nil)
+                        callback(translation: translation, error: error)
                     }
                 }
+                
+                guard let data = data,
+                    xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) as? String
+                else { return }
+                
+                translation = self.translationFromXML(xmlString)
             }
             task.resume()
         }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6BF86B27E801452077EAF608 /* Pods_PolyglotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925AA115444C33786930F106 /* Pods_PolyglotTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		76E093B31C869D9803863B0A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9A4E55DA20E420F9D1A394 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6BF86B27E801452077EAF608 /* Pods_PolyglotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925AA115444C33786930F106 /* Pods_PolyglotTests.framework */; };
+		76E093B31C869D9803863B0A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB9A4E55DA20E420F9D1A394 /* Pods.framework */; };
 		B60F875D1985F1C200ABB94A /* PolyglotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60F875C1985F1C200ABB94A /* PolyglotTests.swift */; };
 		B6156E3F1999D93B002CE52F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67FC7841985F20B0030ABF8 /* Main.storyboard */; };
 		B6682231199C68AE00DFA909 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6682230199C68AE00DFA909 /* StringExtensionTests.swift */; };
@@ -344,6 +344,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -410,6 +411,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PolyglotSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ayakanonaka.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PolyglotSample;
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotSample/Polyglot-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -425,6 +427,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PolyglotSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ayakanonaka.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = PolyglotSample;
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotSample/Polyglot-Bridging-Header.h";
 			};
@@ -446,6 +449,7 @@
 				);
 				INFOPLIST_FILE = PolyglotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ayakanonaka.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotTests/PolyglotTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -465,6 +469,7 @@
 				);
 				INFOPLIST_FILE = PolyglotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ayakanonaka.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotTests/PolyglotTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";

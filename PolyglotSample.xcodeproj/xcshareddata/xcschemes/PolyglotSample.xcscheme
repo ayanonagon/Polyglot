@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+   PolyglotSample.xcodeproj/xcshareddata/xcschemes/Polyglot.xcscheme
    LastUpgradeVersion = "0710"
+   PolyglotSample.xcodeproj/xcshareddata/xcschemes/PolyglotSample.xcscheme
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"

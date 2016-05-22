@@ -36,17 +36,14 @@ Start translating.
 
 class ViewController: UIViewController {
 
-    var translator: Polyglot?
+    let translator = Polyglot(clientId: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
 
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var translationLabel: UILabel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.translator = Polyglot(clientId: "YOUR_CLIENT_ID", clientSecret: "YOUR_CLIENT_SECRET")
-    }
-
     @IBAction func didTapTranslateButton(sender: AnyObject) {
+        guard let text = inputTextField.text else { return }
+
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         self.translator?.translate(self.inputTextField.text!) { translation in
             dispatch_async(dispatch_get_main_queue(), {
