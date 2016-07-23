@@ -74,11 +74,11 @@ class PolyglotTests: XCTestCase {
     }
 
     func testTranslate() {
-        let expectation = expectationWithDescription("translation done")
+        let expectation = self.expectation(withDescription: "translation done")
 
         // Stub POST access token
         stubRequest("POST", "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13")
-        .withBody("client_id=myClientId&client_secret=myClientSecret&scope=http://api.microsofttranslator.com&grant_type=client_credentials".dataUsingEncoding(NSUTF8StringEncoding))
+        .withBody("client_id=myClientId&client_secret=myClientSecret&scope=http://api.microsofttranslator.com&grant_type=client_credentials".dataUsingEncoding(String.Encoding.utf8))
         .andReturn(200)
         .withHeaders(["Content-Type": "application/json"])
         .withBody("{\"access_token\":\"octocatsruleeverythingaroundme\", \"expires_in\":\"600\"}")
@@ -95,6 +95,6 @@ class PolyglotTests: XCTestCase {
             expectation.fulfill()
         }
 
-        waitForExpectationsWithTimeout(1, handler: nil)
+        waitForExpectations(withTimeout: 1, handler: nil)
     }
 }

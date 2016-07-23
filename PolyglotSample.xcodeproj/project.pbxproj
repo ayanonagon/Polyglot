@@ -184,9 +184,13 @@
 				TargetAttributes = {
 					B60F87431985F1C200ABB94A = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 77898Z5KPT;
+						DevelopmentTeamName = "Mark Hamilton";
+						LastSwiftMigration = 0800;
 					};
 					B60F87551985F1C200ABB94A = {
 						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = B60F87431985F1C200ABB94A;
 					};
 				};
@@ -414,6 +418,7 @@
 				PRODUCT_NAME = PolyglotSample;
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotSample/Polyglot-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -428,6 +433,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = PolyglotSample;
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotSample/Polyglot-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -450,6 +456,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotTests/PolyglotTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -468,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PolyglotTests/PolyglotTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
