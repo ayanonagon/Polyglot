@@ -41,10 +41,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var translationLabel: UILabel!
 
-    @IBAction func didTapTranslateButton(sender: AnyObject) {
+    @IBAction func didTapTranslateButton(_ sender: AnyObject) {
         guard let text = inputTextField.text else { return }
 
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.shared().isNetworkActivityIndicatorVisible = true
         translator.translate(text) { translation in
             if let language = self.translator.fromLanguage?.rawValue {
                 self.translationLabel.text = "Translated from \(language.capitalizedString): \(translation)"
