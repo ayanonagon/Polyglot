@@ -63,8 +63,8 @@ class PolyglotTests: XCTestCase {
         let polyglot: Polyglot = Polyglot(clientId: "myClientId", clientSecret: "myClientSecret")
         polyglot.translate("Ik weet het niet") { (translation, error) in
             
-            guard let translation = translation else { return }
-            XCTAssertEqual(translation, "I don't know")
+//            guard let translation = translation else { return }
+            XCTAssertEqual(translation!, "I don't know")
             expectation.fulfill()
         }
 

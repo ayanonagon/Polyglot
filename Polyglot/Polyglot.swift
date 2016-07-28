@@ -125,9 +125,8 @@ public class Polyglot {
                     }
                 }
                 
-                guard let data = data,
-                    xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) as? String
-                else { return }
+                guard let data = data, xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) as? String
+                    else { return }
                 
                 translation = self.translationFromXML(xmlString)
             }
