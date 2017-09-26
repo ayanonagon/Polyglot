@@ -32,10 +32,10 @@ extension String {
     
     public var language: Language? {
         if characters.count > 0 { // Prevent Index Out of Bounds in NSLinguisticTagger
-            let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagSchemeLanguage], options: 0)
+            let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagScheme.language], options: 0)
             tagger.string = self
-            if let result = tagger.tag(at: 0, scheme: NSLinguisticTagSchemeLanguage, tokenRange: nil, sentenceRange: nil) {
-                return Language(rawValue: result)
+            if let result = tagger.tag(at: 0, scheme: NSLinguisticTagScheme.language, tokenRange: nil, sentenceRange: nil) {
+                return Language(rawValue: result.rawValue)
             }
         }
         return nil
