@@ -23,8 +23,8 @@
 import Foundation
 
 /**
-    Supported languages.
-*/
+ Supported languages.
+ */
 public enum Language: String {
     case Arabic                 = "ar"
     case Bosnian                = "bs"
@@ -117,33 +117,34 @@ public enum Language: String {
 /**
     Responsible for translating text.
 */
-public class Polyglot {
+open class Polyglot {
 
     let session: Session
-
+    
     /// The language to be translated from. It will automatically detect the language if you do not set this.
-    public var fromLanguage: Language?
+    open var fromLanguage: Language?
 
     /// The language to translate to.
-    public var toLanguage: Language
+    open var toLanguage: Language
 
 
     /**
-        - parameter clientId: Microsoft Translator client ID.
-        - parameter clientSecret: Microsoft Translator client secret.
-    */
+     - parameter clientId: Microsoft Translator client ID.
+     - parameter clientSecret: Microsoft Translator client secret.
+     */
     public init(clientId: String, clientSecret: String) {
         session = Session(clientId: clientId, clientSecret: clientSecret)
         toLanguage = Language.English
     }
-
+    
     /**
-        Translates a given piece of text.
+        Translates a given piece of text asynchronously. Switch to the main thread within the callback
+        if you want to update your UI by using `dispatch_async(dispatch_get_main_queue()) { /* code */ }`.
 
         - parameter text: The text to translate.
         - parameter callback: The code to be executed once the translation has completed.
     */
-    public func translate(text: String, callback: ((translation: String) -> (Void))) {
+    public func translate(text: String, callback: @escaping ((_ translation: String?, _ error: Error?) -> (Void))) {
         session.getAccessToken { token in
             if self.fromLanguage == nil {
                 self.fromLanguage = text.language
@@ -152,34 +153,31 @@ public class Polyglot {
             let fromLanguageComponent = (self.fromLanguage != nil) ? "&from=\(self.fromLanguage!.rawValue.urlEncoded!)" : ""
             let urlString = "http://api.microsofttranslator.com/v2/Http.svc/Translate?text=\(text.urlEncoded!)\(toLanguageComponent)\(fromLanguageComponent)"
 
-            let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
-            request.HTTPMethod = "GET"
+            var request = URLRequest(url: URL(string: urlString)!)
+            request.httpMethod = "GET"
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
 
-            let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {(data, response, error) in
-                let translation: String
+            let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
+                let translation : String?
                 guard
                     let data = data,
-                    let xmlString = NSString(data: data, encoding: NSUTF8StringEncoding) as? String
+                    let xmlString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String?
                 else {
-                    translation = ""
                     return
                 }
-
                 translation = self.translationFromXML(xmlString)
-
                 defer {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        callback(translation: translation)
+                    DispatchQueue.main.async {
+                        callback(translation, error)
                     }
                 }
-            }
+            }) 
             task.resume()
         }
     }
 
-    private func translationFromXML(XML: String) -> String {
-        let translation = XML.stringByReplacingOccurrencesOfString("<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">", withString: "")
-        return translation.stringByReplacingOccurrencesOfString("</string>", withString: "")
+    fileprivate func translationFromXML(_ XML: String) -> String {
+        let translation = XML.replacingOccurrences(of: "<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">", with: "")
+        return translation.replacingOccurrences(of: "</string>", with: "")
     }
 }
