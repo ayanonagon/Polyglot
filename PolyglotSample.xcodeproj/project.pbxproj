@@ -21,7 +21,6 @@
 
 /* Begin PBXFileReference section */
 		00CAD5F31F7A6BE90090DD38 /* Polyglot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Polyglot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		00CAD5F71F7A6C470090DD38 /* Nocilla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nocilla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CAD5FB1F7A6CC40090DD38 /* Polyglot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Polyglot.swift; path = Polyglot/Polyglot.swift; sourceTree = SOURCE_ROOT; };
 		00CAD5FC1F7A6CC40090DD38 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Polyglot/Session.swift; sourceTree = SOURCE_ROOT; };
 		00CAD5FD1F7A6CC40090DD38 /* StringExtensionPolyglot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StringExtensionPolyglot.swift; path = Polyglot/StringExtensionPolyglot.swift; sourceTree = SOURCE_ROOT; };
@@ -95,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				00CAD5FA1F7A6CB40090DD38 /* Polyglot */,
-				00CAD5F71F7A6C470090DD38 /* Nocilla.framework */,
 				00CAD5F31F7A6BE90090DD38 /* Polyglot.framework */,
 				B67FC7821985F20B0030ABF8 /* PolyglotSample */,
 				B60F87591985F1C200ABB94A /* PolyglotTests */,

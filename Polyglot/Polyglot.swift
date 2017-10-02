@@ -144,7 +144,7 @@ open class Polyglot {
         - parameter text: The text to translate.
         - parameter callback: The code to be executed once the translation has completed.
     */
-    public func translate(text: String, callback: ((translation: String?, error: TranslationError?) -> (Void))) {
+    public func translate(text: String, callback: @escaping ((_ translation: String?, _ error: Error?) -> (Void))) {
         session.getAccessToken { token in
             if self.fromLanguage == nil {
                 self.fromLanguage = text.language
@@ -158,8 +158,7 @@ open class Polyglot {
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
 
             let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
-                let error: TranslationError? = (error != nil) ? .SessionError(error!) : nil
-                var translation : String?
+                let translation : String?
                 guard
                     let data = data,
                     let xmlString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String?
@@ -168,8 +167,8 @@ open class Polyglot {
                 }
                 translation = self.translationFromXML(xmlString)
                 defer {
-                    dispatch_async(dispatch_get_main_queue()) {
-                        callback(translation: translation, error: error)
+                    DispatchQueue.main.async {
+                        callback(translation, error)
                     }
                 }
             }) 
@@ -181,8 +180,4 @@ open class Polyglot {
         let translation = XML.replacingOccurrences(of: "<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">", with: "")
         return translation.replacingOccurrences(of: "</string>", with: "")
     }
-}
-
-public enum TranslationError : ErrorType {
-    case SessionError(NSError)
 }
