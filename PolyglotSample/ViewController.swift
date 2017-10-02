@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Polyglot
 
 
 /**
@@ -41,20 +40,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var translationLabel: UILabel!
 
-    @IBAction func didTapTranslateButton(sender: AnyObject) {
+    @IBAction func didTapTranslateButton(_ sender: AnyObject) {
         guard let text = inputTextField.text else { return }
 
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
-        self.translator?.translate(self.inputTextField.text!) { translation in
-            dispatch_async(dispatch_get_main_queue(), {
-                if let language = self.translator?.fromLanguage?.rawValue {
-                    self.translationLabel.text = "Translated from \(language.capitalizedString): \(translation)"
-                }
-                else {
-                    self.translationLabel.text = translation
-                }
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            })
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        translator.translate(text: text) { translation,error  in
+            if let language = self.translator.fromLanguage?.rawValue {
+                self.translationLabel.text = "Translated from \(language.capitalized): \(translation)"
+            }
+            else {
+                self.translationLabel.text = translation
+            }
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
 }

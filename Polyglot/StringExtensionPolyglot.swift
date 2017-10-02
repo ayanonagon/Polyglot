@@ -25,17 +25,17 @@ import Foundation
 extension String {
 
     public var urlEncoded: String? {
-        let urlQueryAllowedCharacterSet: NSMutableCharacterSet = NSCharacterSet.URLQueryAllowedCharacterSet().mutableCopy() as! NSMutableCharacterSet
-        urlQueryAllowedCharacterSet.removeCharactersInString("&=?+")
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(urlQueryAllowedCharacterSet)
+        let urlQueryAllowedCharacterSet: NSMutableCharacterSet = (CharacterSet.urlQueryAllowed as NSCharacterSet).mutableCopy() as! NSMutableCharacterSet
+        urlQueryAllowedCharacterSet.removeCharacters(in: "&=?+")
+        return self.addingPercentEncoding(withAllowedCharacters: urlQueryAllowedCharacterSet as CharacterSet)
     }
     
     public var language: Language? {
-        if (self.characters.count > 0) { // Prevent Index Out of Bounds in NSLinguisticTagger
-            let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagSchemeLanguage], options: 0)
+        if characters.count > 0 { // Prevent Index Out of Bounds in NSLinguisticTagger
+            let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagScheme.language], options: 0)
             tagger.string = self
-            if let result = tagger.tagAtIndex(0, scheme: NSLinguisticTagSchemeLanguage, tokenRange: nil, sentenceRange: nil) {
-                return Language(rawValue: result)
+            if let result = tagger.tag(at: 0, scheme: NSLinguisticTagScheme.language, tokenRange: nil, sentenceRange: nil) {
+                return Language(rawValue: result.rawValue)
             }
         }
         return nil

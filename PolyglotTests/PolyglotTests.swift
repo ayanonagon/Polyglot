@@ -43,13 +43,42 @@ class PolyglotTests: XCTestCase {
         XCTAssertNil(polyglot.fromLanguage?.rawValue)
         XCTAssertEqual(polyglot.toLanguage, Language.English)
     }
+    
+    func testLanguageForLocale() {
+        
+        let expectations: [(langCode: String, region: String?, expectedLanguage: Language?)] = [
+            (langCode: "en", region: "GB",      expectedLanguage: Language.English),
+            (langCode: "en", region: "APPLE",   expectedLanguage: Language.English),
+            (langCode: "de", region: nil,       expectedLanguage: Language.German),
+            (langCode: "de", region: "DE",      expectedLanguage: Language.German),
+            (langCode: "de", region: "CH",      expectedLanguage: Language.German),
+            (langCode: "nb", region: nil,       expectedLanguage: Language.Norwegian),
+            (langCode: "nb", region: "NO",      expectedLanguage: Language.Norwegian),
+            (langCode: "zh", region: "Hans",    expectedLanguage: Language.ChineseSimplified),
+            (langCode: "zh", region: "Hant",    expectedLanguage: Language.ChineseTraditional),
+            (langCode: "ja", region: nil,       expectedLanguage: Language.Japanese),
+            (langCode: "sr", region: nil,       expectedLanguage: Language.Serbian),
+            (langCode: "sr", region: "Latn",    expectedLanguage: Language.SerbianLatin),
+            (langCode: "sr", region: "Cyrl",    expectedLanguage: Language.SerbianCyrillic),
+            (langCode: "xy", region: nil,       expectedLanguage: nil),
+            (langCode: "xy", region: "TEST",    expectedLanguage: nil)
+        ]
+        
+        for (langCode, region, expectedLanguage) in expectations {
+            
+            let resultingLanguage = Language.languageForLocale(languageCode: langCode, region: region)
+            XCTAssertEqual(resultingLanguage, expectedLanguage)
+            
+        }
+        
+    }
 
     func testTranslate() {
-        let expectation = expectationWithDescription("translation done")
+        let expectation = self.expectation(description: "translation done")
 
         // Stub POST access token
         stubRequest("POST", "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13")
-        .withBody("client_id=myClientId&client_secret=myClientSecret&scope=http://api.microsofttranslator.com&grant_type=client_credentials".dataUsingEncoding(NSUTF8StringEncoding))
+        .withBody("client_id=myClientId&client_secret=myClientSecret&scope=http://api.microsofttranslator.com&grant_type=client_credentials".dataUsingEncoding(String.Encoding.utf8))
         .andReturn(200)
         .withHeaders(["Content-Type": "application/json"])
         .withBody("{\"access_token\":\"octocatsruleeverythingaroundme\", \"expires_in\":\"600\"}")
@@ -68,6 +97,6 @@ class PolyglotTests: XCTestCase {
             expectation.fulfill()
         }
 
-        waitForExpectationsWithTimeout(1, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
 }
