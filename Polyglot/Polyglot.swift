@@ -23,8 +23,8 @@
 import Foundation
 
 /**
-    Supported languages.
-*/
+ Supported languages.
+ */
 public enum Language: String {
     case Arabic                 = "ar"
     case Bosnian                = "bs"
@@ -120,7 +120,7 @@ public enum Language: String {
 open class Polyglot {
 
     let session: Session
-
+    
     /// The language to be translated from. It will automatically detect the language if you do not set this.
     open var fromLanguage: Language?
 
@@ -129,14 +129,14 @@ open class Polyglot {
 
 
     /**
-        - parameter clientId: Microsoft Translator client ID.
-        - parameter clientSecret: Microsoft Translator client secret.
-    */
+     - parameter clientId: Microsoft Translator client ID.
+     - parameter clientSecret: Microsoft Translator client secret.
+     */
     public init(clientId: String, clientSecret: String) {
         session = Session(clientId: clientId, clientSecret: clientSecret)
         toLanguage = Language.English
     }
-
+    
     /**
         Translates a given piece of text asynchronously. Switch to the main thread within the callback
         if you want to update your UI by using `dispatch_async(dispatch_get_main_queue()) { /* code */ }`.
@@ -144,7 +144,7 @@ open class Polyglot {
         - parameter text: The text to translate.
         - parameter callback: The code to be executed once the translation has completed.
     */
-    open func translate(_ text: String, callback: @escaping ((_ translation: String) -> (Void))) {
+    public func translate(text: String, callback: ((translation: String?, error: TranslationError?) -> (Void))) {
         session.getAccessToken { token in
             if self.fromLanguage == nil {
                 self.fromLanguage = text.language
@@ -158,19 +158,19 @@ open class Polyglot {
             request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
 
             let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
-                let translation: String
+                let error: TranslationError? = (error != nil) ? .SessionError(error!) : nil
+                var translation : String?
                 guard
                     let data = data,
                     let xmlString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) as String?
                 else {
-                    translation = ""
                     return
                 }
-
                 translation = self.translationFromXML(xmlString)
-
                 defer {
-                    callback(translation)
+                    dispatch_async(dispatch_get_main_queue()) {
+                        callback(translation: translation, error: error)
+                    }
                 }
             }) 
             task.resume()
@@ -181,4 +181,8 @@ open class Polyglot {
         let translation = XML.replacingOccurrences(of: "<string xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">", with: "")
         return translation.replacingOccurrences(of: "</string>", with: "")
     }
+}
+
+public enum TranslationError : ErrorType {
+    case SessionError(NSError)
 }
